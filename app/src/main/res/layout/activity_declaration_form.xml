@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".onboardingpage.DeclarationForm">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_margin="10dp"
+            android:background="@drawable/heading_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/poppins_bold"
+                android:textColor="#ffffff"
+                android:textSize="20sp"></TextView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"></View>
+
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:background="@drawable/heading_bg"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Declaration Form"
+                    android:textColor="#ffffff"
+                    android:textSize="20sp"></TextView>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"></View>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/version_number"></TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Sign the consent form for carbon credit"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:gravity="center"></TextView>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginTop="30dp"
+                android:id="@+id/checkRelative">
+
+                <CheckBox
+                    android:id="@+id/credit_checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true" />
+
+                <TextView
+                    android:id="@+id/carbon_credit_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="@string/acceptTNC"
+                    android:textColor="@color/penRoyalBlue"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@+id/credit_checkBox">
+
+                </TextView>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_viewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <ImageView
+                            android:id="@+id/farmer_sign"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginEnd="15dp"
+                            android:background="#00000000"
+                            android:padding="10dp"
+                            android:src="@drawable/farmer_signature"
+                            android:textSize="15sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_enroller"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_margin="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <ImageView
+                            android:id="@+id/enroller_sign"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:background="#00000000"
+                            android:padding="10dp"
+                            android:textSize="15sp" />
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:weightSum="3">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="200dp"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="10dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:maxLines="1"
+                                android:text="Framer Photo"></TextView>
+
+                            <ImageView
+                                android:id="@+id/farmer_camera"
+                                android:layout_below="@+id/name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal"
+                                android:src="@drawable/photo_camera"></ImageView>
+
+                            <ImageView
+                                android:id="@+id/farmer_camera_cancel"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="25dp"
+                                android:src="@drawable/ic_cancel"
+                                android:layout_alignParentRight="true"></ImageView>
+
+
+                        </RelativeLayout>
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="200dp"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/name1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:maxLines="4"
+                                android:text="Declaration Form"></TextView>
+
+                            <ImageView
+                                android:id="@+id/declaration_camera"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal"
+                                android:src="@drawable/photo_camera"
+                                android:layout_below="@+id/name1"></ImageView>
+
+                            <ImageView
+                                android:id="@+id/declaration_camera_cancel"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="25dp"
+                                android:src="@drawable/ic_cancel"
+                                android:layout_alignParentRight="true"></ImageView>
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="200dp"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="5dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/name2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginBottom="5dp"
+                                android:fontFamily="@font/montserrat_medium"
+                                android:maxLines="1"
+                                android:text="Others"></TextView>
+
+                            <ImageView
+                                android:id="@+id/other_camera"
+                                android:layout_below="@+id/name2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                android:orientation="horizontal"
+                                android:src="@drawable/photo_camera"></ImageView>
+
+                            <ImageView
+                                android:id="@+id/other_camera_cancel"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="25dp"
+                                android:src="@drawable/ic_cancel"
+                                android:layout_alignParentRight="true"></ImageView>
+
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="30dp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/location_back"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/heading_bg"
+                    style="@style/yourButtonStyle"
+                    android:text="@string/back"
+                    android:textColor="#ffffff">
+                </Button>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+                </View>
+
+                <Button
+                    android:id="@+id/declara_Next"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/green_bg"
+                    style="@style/yourButtonStyle"
+                    android:text="Submit"
+                    android:textColor="#ffffff">
+                </Button>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

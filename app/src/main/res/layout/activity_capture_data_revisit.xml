@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:map="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+tools:context=".revisit.CaptureDataRevisit">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/menuone">
+
+
+        </ImageView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_gravity="right"
+        android:layout_margin="10dp"
+        android:background="@drawable/heading_bg"
+        android:orientation="vertical"
+        android:id="@+id/lindetails1"
+        android:layout_alignParentRight="true">
+
+        <TextView
+            android:id="@+id/text_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins_bold"
+            android:textColor="#ffffff"
+            android:textSize="20sp"></TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        android:id="@+id/lindetails2"
+        android:layout_below="@id/lindetails1">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"></View>
+
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:background="@drawable/heading_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/capture_data"
+                android:textColor="#ffffff"
+                android:textSize="20sp"></TextView>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"></View>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:id="@+id/lindetails3"
+        android:layout_below="@id/lindetails2"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/version_number"></TextView>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lindetails4"
+        android:layout_below="@id/lindetails3">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </fragment>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:id="@+id/menuLayout"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/editext_bg"
+            android:visibility="visible"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true"
+            >
+
+            <ImageView
+                android:id="@+id/edit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:src="@drawable/edit"
+                android:visibility="gone">
+            </ImageView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="gone">
+            </View>
+
+            <ImageView
+                android:id="@+id/backArrow"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/back_arrow"
+                android:visibility="gone">
+            </ImageView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="gone">
+            </View>
+
+            <ImageView
+                android:id="@+id/bin"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:src="@drawable/bin"
+                android:visibility="gone">
+            </ImageView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:visibility="gone">
+            </View>
+
+            <ImageView
+                android:id="@+id/saveLocation"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:layout_gravity="center"
+                android:src="@drawable/diskette">
+            </ImageView>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+
+
+</RelativeLayout>

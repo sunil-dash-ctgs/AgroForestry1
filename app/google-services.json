@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "316434756994",
+    "project_id": "salonkarts-b2b-customer",
+    "storage_bucket": "salonkarts-b2b-customer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316434756994:android:94a5cbb14589aa9941cb9b",
+        "android_client_info": {
+          "package_name": "co.kcagroforestry.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "316434756994-2ducoaj2al6229f9hdakdb0cebs4c3n4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBctRu0egHapv2VTK5hdTnRVVUSzzjd1zQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "316434756994-2ducoaj2al6229f9hdakdb0cebs4c3n4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
