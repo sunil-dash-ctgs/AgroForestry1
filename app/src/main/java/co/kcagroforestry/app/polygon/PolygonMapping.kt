@@ -1,15 +1,19 @@
 package co.kcagroforestry.app.polygon
 
 import android.content.Intent
+import android.content.res.ColorStateList
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.util.Log
 import android.view.View
+import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
 import cn.pedant.SweetAlert.SweetAlertDialog
 import co.kcagroforestry.app.R
 import co.kcagroforestry.app.databinding.ActivityPolygonMappingBinding
@@ -53,6 +57,10 @@ class PolygonMapping : AppCompatActivity() {
     lateinit var timerData: TimerData
     var StartTime = 0;
 
+    private var selectedSearchTypeId = 0
+    private var searchTypeIDList = arrayListOf<Int>()
+    private var searchTypeList = arrayListOf<String>()
+
     fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -75,6 +83,7 @@ class PolygonMapping : AppCompatActivity() {
 
         timerData = TimerData(this@PolygonMapping, binding.textTimer)
         StartTime = timerData.startTime(0).toInt()
+        fetchSearchType()
 
         binding.assamFarmerNext.setOnClickListener {
 
@@ -110,6 +119,58 @@ class PolygonMapping : AppCompatActivity() {
 
             } else {
                 searchData(binding.searchData.text.toString())
+            }
+        }
+    }
+
+    private fun fetchSearchType() {
+        val apiInterface = ApiClient.getRetrofitInstance().create(ApiInterface::class.java)
+        apiInterface.searchType("Bearer $token").enqueue(object : Callback<ResponseBody> {
+            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
+                progress.dismiss()
+                when (response.code()) {
+                    200 -> {
+                        val stringResponse = JSONObject(response.body()!!.string())
+                        val jsonArray = stringResponse.optJSONArray("type")
+                        if (jsonArray != null) {
+                            if (jsonArray.length() > 0) {
+                                searchTypeIDList.add(0)
+                                searchTypeList.add("Select Search Type")
+                                for (i in 0 until jsonArray.length()) {
+                                    val jsonObject = jsonArray.getJSONObject(i)
+                                    val searchTypeId = jsonObject.optString("id").toInt()
+                                    val searchTypeName = jsonObject.optString("name")
+                                    searchTypeIDList.add(searchTypeId)
+                                    searchTypeList.add(searchTypeName)
+                                }
+                                searchTypeSpinner()
+                            }
+                        }
+                    }
+                    else ->{
+                        Toast.makeText(this@PolygonMapping, "Failed to get Search Types. Please try again later.", Toast.LENGTH_SHORT).show()
+                    }
+                }
+
+            }
+            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
+                Toast.makeText(this@PolygonMapping, "Error occurred while getting Search Types.", Toast.LENGTH_SHORT).show()
+                progress.dismiss()
+            }
+        })
+    }
+
+    private fun searchTypeSpinner(){
+        val adapter = ArrayAdapter(this, R.layout.dropdown_list_layout, searchTypeList)
+        binding.searchTypeSpinner.setText(adapter.getItem(0));
+        binding.searchTypeSpinner.setAdapter(adapter)
+
+        binding.searchTypeSpinner.onItemClickListener = object : AdapterView.OnItemClickListener {
+            override fun onItemClick(
+                parent: AdapterView<*>?, arg1: View?, position: Int,
+                id: Long
+            ) {
+                selectedSearchTypeId = position
             }
         }
     }

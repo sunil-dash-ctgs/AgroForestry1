@@ -247,4 +247,8 @@ interface ApiInterface {
     @GET("V1/agro-farmer-visit-no")
     fun farmervisitno(@Header("Authorization") token: String,) : Call<ResponseBody>
 
+    @Headers("Accept: application/json")
+    @GET("V1/search-type")
+    fun searchType(@Header("Authorization") token: String): Call<ResponseBody>
+
 }

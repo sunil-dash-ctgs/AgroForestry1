@@ -42,8 +42,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AgroForestry"
-        tools:replace="android:icon"
-        tools:targetApi="31">
+        tools:targetApi="31"
+        tools:replace="android:icon">
         <activity
             android:name=".polygon.PolygonAlreadySubmited"
             android:exported="true">
