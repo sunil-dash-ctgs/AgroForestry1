@@ -86,31 +86,65 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
             android:orientation="vertical">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
                 android:maxLines="2"
-                android:text="@string/search"
-                android:fontFamily="@font/montserrat_bold" />
+                android:text="@string/search" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:hint="Search Type"
+                    android:textColorHint="@color/black1"
+                    app:boxStrokeColor="#9BD5AA"
+                    app:boxStrokeWidth="1dp"
+                    app:boxStrokeWidthFocused="1dp">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/searchTypeSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="none"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:fontFamily="@font/poppins_medium"
                     android:hint="@string/search_here"
                     android:textColorHint="@color/black1"
                     app:boxStrokeColor="#9BD5AA"
                     app:boxStrokeWidth="1dp"
-                    android:fontFamily="@font/montserrat_medium"
                     app:boxStrokeWidthFocused="1dp">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -118,13 +152,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:enabled="true"
-                        android:fontFamily="@font/montserrat_medium"
+                        android:fontFamily="@font/poppins_regular"
                         android:longClickable="false"
                         android:maxLength="50"
-                        android:textColorHint="@color/primary"
                         android:maxLines="1"
                         android:padding="10dp"
                         android:textColor="@color/black"
+                        android:textColorHint="@color/black1"
                         android:textSize="15sp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -134,9 +168,9 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
-                    android:backgroundTint="#F9F8FA"
                     android:layout_marginTop="15dp"
                     android:layout_marginRight="5dp"
+                    android:backgroundTint="#F9F8FA"
                     android:src="@drawable/ic_search" />
 
 
@@ -146,7 +180,7 @@
                 android:id="@+id/linearLayout12"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="5dp"
                 android:orientation="horizontal"
                 app:layout_constraintTop_toBottomOf="@+id/llMobileNo"
                 tools:layout_editor_absoluteX="16dp">
@@ -192,8 +226,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:weightSum="2"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:weightSum="2">
 
                 <LinearLayout
                     android:layout_width="0dp"
@@ -205,11 +239,11 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
+                        android:fontFamily="@font/montserrat_medium"
                         android:hint="@string/farmer_name"
                         android:textColorHint="@color/black1"
                         app:boxStrokeColor="#9BD5AA"
                         app:boxStrokeWidth="1dp"
-                        android:fontFamily="@font/montserrat_medium"
                         app:boxStrokeWidthFocused="1dp">
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -244,12 +278,12 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
+                        android:fontFamily="@font/montserrat_medium"
                         android:hint="@string/Age"
                         android:textColorHint="@color/black1"
                         app:boxStrokeColor="#9BD5AA"
                         app:boxStrokeWidth="1dp"
-                        app:boxStrokeWidthFocused="1dp"
-                        android:fontFamily="@font/montserrat_medium">
+                        app:boxStrokeWidthFocused="1dp">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/assam_farmer_age"
@@ -279,18 +313,18 @@
                 android:id="@+id/guardian_linearlayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="10dp">
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:fontFamily="@font/montserrat_medium"
                     android:hint="@string/guardian_name"
                     android:textColorHint="@color/black1"
                     app:boxStrokeColor="#9BD5AA"
                     app:boxStrokeWidth="1dp"
-                    android:fontFamily="@font/montserrat_medium"
                     app:boxStrokeWidthFocused="1dp">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -329,11 +363,11 @@
                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
+                        android:fontFamily="@font/montserrat_medium"
                         android:hint="@string/aadhar"
                         android:textColorHint="@color/black1"
                         app:boxStrokeColor="#9BD5AA"
                         app:boxStrokeWidth="1dp"
-                        android:fontFamily="@font/montserrat_medium"
                         app:boxStrokeWidthFocused="1dp">
 
                         <com.google.android.material.textfield.TextInputEditText

@@ -42,25 +42,46 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AgroForestry"
-        tools:targetApi="31"
-        tools:replace="android:icon">
+        tools:replace="android:icon"
+        tools:targetApi="31">
+        <activity
+            android:name=".updateinfo.DeclarationInfoUpdate"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".updateinfo.BankAccountUpdate"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".updateinfo.CultivationInfoUpdate"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".updateinfo.PlantationInfoUpdate"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".updateinfo.LocationInfoUpdate"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".updateinfo.FarmerOnBoardingUpdate"
+            android:exported="true">
+        </activity>
         <activity
             android:name=".polygon.PolygonAlreadySubmited"
             android:exported="true">
-        <!--    <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
         </activity>
         <activity
             android:name=".cropintellix.SplashScreen"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity
             android:name=".cropintellix.MainActivity"
@@ -97,23 +118,24 @@
             android:exported="true" />
         <activity
             android:name=".onboardingpage.BankAccountDetails"
-            android:exported="true"></activity>
-        <activity
-            android:name=".onboardingpage.CultivationInfo"
             android:exported="true" />
         <activity
+            android:name=".onboardingpage.CultivationInfo"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".onboardingpage.DeclarationForm"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".onboardingpage.FarmerOnBoarding"
             android:exported="true" />
         <activity
             android:name=".onboardingpage.LocationInfo"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".onboardingpage.PlantationInfo"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".polygon.CaptureData"
             android:exported="true" />

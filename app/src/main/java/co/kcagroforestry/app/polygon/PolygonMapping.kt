@@ -61,6 +61,9 @@ class PolygonMapping : AppCompatActivity() {
     private var searchTypeIDList = arrayListOf<Int>()
     private var searchTypeList = arrayListOf<String>()
 
+    private var serachId: Int = 0
+    private var searchName: Int = 0
+
     fun String.toEditable(): Editable = Editable.Factory.getInstance().newEditable(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -118,7 +121,9 @@ class PolygonMapping : AppCompatActivity() {
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
             } else {
+
                 searchData(binding.searchData.text.toString())
+
             }
         }
     }
@@ -171,6 +176,12 @@ class PolygonMapping : AppCompatActivity() {
                 id: Long
             ) {
                 selectedSearchTypeId = position
+
+                serachId = searchTypeIDList[selectedSearchTypeId]
+
+                var searchName = searchTypeList[position]
+                Log.d("userdetailsposition", "Data   $serachId")
+                Log.d("userdetailsposition", "Data1   $searchName")
             }
         }
     }
@@ -184,7 +195,7 @@ class PolygonMapping : AppCompatActivity() {
         progress.show()
 
         val apiInterface = ApiClient.getRetrofitInstance().create(ApiInterface::class.java)
-        apiInterface.searchFramer("Bearer $token", searchNumber)
+        apiInterface.searchFramer("Bearer $token", searchNumber,serachId.toString())
             .enqueue(object : Callback<ResponseBody> {
                 override fun onResponse(
                     call: Call<ResponseBody>,
@@ -192,6 +203,8 @@ class PolygonMapping : AppCompatActivity() {
                 ) {
 
                     progress.dismiss()
+
+                    Log.d("responsedeta",response.toString())
 
                     if (response.code() == 200) {
                         FarmerUniqueList.clear()
@@ -244,6 +257,20 @@ class PolygonMapping : AppCompatActivity() {
 
 
                         }
+                    }else if(response.code() == 422){
+
+                        progress.dismiss()
+
+                        val warningDialog = SweetAlertDialog(this@PolygonMapping, SweetAlertDialog.WARNING_TYPE)
+                        warningDialog.titleText = resources.getString(R.string.warning)
+                        warningDialog.contentText = "Data is not available"
+                        warningDialog.confirmText = " OK "
+                        warningDialog.showCancelButton(false)
+                        warningDialog.setCancelable(false)
+                        warningDialog.setConfirmClickListener {
+                            warningDialog.cancel()
+                            //  backScreen()
+                        }.show()
                     }
                 }
 

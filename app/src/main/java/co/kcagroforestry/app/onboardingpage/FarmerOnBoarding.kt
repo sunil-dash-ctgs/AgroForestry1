@@ -656,6 +656,7 @@ class FarmerOnBoarding : AppCompatActivity() {
         val mobileno: MultipartBody.Part = MultipartBody.Part.createFormData("mobileno", null, mobilenumber)
         val whats_no: MultipartBody.Part = MultipartBody.Part.createFormData("whats_no", null, whatesnumber)
         val aadharnumber: MultipartBody.Part = MultipartBody.Part.createFormData("aadharnumber", null, aadhar_number)
+        val mobile_relation_owner: MultipartBody.Part = MultipartBody.Part.createFormData("mobile_relation_owner", null, mobileaccess)
 
         val ImageBody1 : MultipartBody.Part = MultipartBody.Part.createFormData("document1_photo", file1.name, requestFileImage1)
         val ImageBody2: MultipartBody.Part = MultipartBody.Part.createFormData("document2_photo", file2.name, requestFileImage2)
@@ -664,7 +665,7 @@ class FarmerOnBoarding : AppCompatActivity() {
         val submit_onboarding = ApiClient.getRetrofitInstance().create(ApiInterface::class.java)
 
         var sumitdata = submit_onboarding.submitOnboarding("Bearer $token",farmer_name,farmeruniquid,farmer_age,gender,cast,guardian_name,
-            nominee_name,relationwith,mobileno,whats_no,aadharnumber,ImageBody1,ImageBody2,ImageBody3)
+            nominee_name,relationwith,mobileno,whats_no,aadharnumber,ImageBody1,ImageBody2,ImageBody3,mobile_relation_owner)
 
         sumitdata.enqueue(object : Callback<ResponseBody>{
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {

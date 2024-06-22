@@ -339,12 +339,12 @@ class LocationInfo : AppCompatActivity() {
                 WarningDialog.contentText = "Enter Your Pincode"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
-            }else if (binding.remark.text.toString().equals("")){
+            }/*else if (binding.remark.text.toString().equals("")){
                 WarningDialog.titleText = resources.getString(R.string.warning)
                 WarningDialog.contentText = "Enter Your Villege Remarks"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
-            }else if (binding.RegestrationNo.text.toString().equals("")){
+            }*/else if (binding.RegestrationNo.text.toString().equals("")){
                 WarningDialog.titleText = resources.getString(R.string.warning)
                 WarningDialog.contentText = "Enter Your Patta Number"
                 WarningDialog.confirmText = resources.getString(R.string.ok)

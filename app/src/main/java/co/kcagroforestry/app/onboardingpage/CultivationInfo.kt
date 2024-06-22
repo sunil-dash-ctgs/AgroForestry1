@@ -21,6 +21,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.Toast
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -51,9 +52,9 @@ import java.io.File
 import java.io.FileNotFoundException
 import java.io.FileOutputStream
 import java.io.IOException
-import java.lang.Exception
 import java.text.SimpleDateFormat
 import java.util.Date
+
 
 class CultivationInfo : AppCompatActivity() {
 
@@ -75,6 +76,8 @@ class CultivationInfo : AppCompatActivity() {
     lateinit var currentPhotoPath: String
     lateinit var photoPath: File
     var rotate = 0
+
+    lateinit var strIrrigation : String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -284,6 +287,22 @@ class CultivationInfo : AppCompatActivity() {
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
                 WarningDialog.contentText = "Enter Your remark"
+                WarningDialog.confirmText = resources.getString(R.string.ok)
+                WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
+
+            }else if (image1.equals("")){
+                WarningDialog.titleText = resources.getString(R.string.warning)
+                WarningDialog.contentText = "Select Document One Image"
+                WarningDialog.confirmText = resources.getString(R.string.ok)
+                WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
+            }else if (image2.equals("")){
+                WarningDialog.titleText = resources.getString(R.string.warning)
+                WarningDialog.contentText = "Select Document Two Image"
+                WarningDialog.confirmText = resources.getString(R.string.ok)
+                WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
+            }else if (image3.equals("")){
+                WarningDialog.titleText = resources.getString(R.string.warning)
+                WarningDialog.contentText = "Select Document Three Image"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
@@ -521,6 +540,18 @@ class CultivationInfo : AppCompatActivity() {
 
         val intSelectButton3: Int = binding.irrigationradioGroup3.checkedRadioButtonId
         var radioButton3 : RadioButton = findViewById(intSelectButton3)
+        strIrrigation = radioButton3.text.toString()
+
+//        val intSelectButton: Int = binding.irrigationradioGroup.checkedRadioButtonId
+
+//        if (intSelectButton3 != -1){
+//            var radioButton3 : RadioButton = findViewById(intSelectButton3)
+//            strIrrigation = radioButton3.text.toString()
+//        }else{
+//            var radioButton : RadioButton = findViewById(intSelectButton)
+//            strIrrigation = radioButton.text.toString()
+//        }
+
 
         val intSelectButton4: Int = binding.managementRadioGroup4.checkedRadioButtonId
         var radioButton4 : RadioButton = findViewById(intSelectButton4)
@@ -536,7 +567,7 @@ class CultivationInfo : AppCompatActivity() {
         val farmername: RequestBody = binding.SoilType.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
         val plowwing_radio: RequestBody = radioButton1.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
         val fertigation_radio: RequestBody = radioButton2.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
-        val irrigation_radio: RequestBody = radioButton3.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
+        val irrigation_radio: RequestBody = strIrrigation.toRequestBody("text/plain".toMediaTypeOrNull())
         val management_radio: RequestBody = radioButton4.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
         val remerks: RequestBody = binding.remark.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
 

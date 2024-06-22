@@ -88,29 +88,26 @@
             android:layout_marginTop="20dp">
 
             <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:fontFamily="@font/montserrat_medium"
                 android:hint="@string/PlantationName"
                 android:textColorHint="@color/black1"
                 app:boxStrokeColor="#9BD5AA"
                 app:boxStrokeWidth="1dp"
-                android:fontFamily="@font/montserrat_medium"
                 app:boxStrokeWidthFocused="1dp">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/PlantationName"
+                <AutoCompleteTextView
+                    android:id="@+id/plantationName"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:enabled="true"
-                    android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ  "
                     android:fontFamily="@font/montserrat_medium"
-                    android:inputType="textNoSuggestions|textUri"
-                    android:longClickable="false"
                     android:maxLength="50"
-                    android:textColorHint="@color/primary"
                     android:maxLines="1"
                     android:padding="5dp"
+                    android:inputType="none"
+                    android:focusable="false"
                     android:textColor="@color/black"
                     android:textSize="15sp" />
 
@@ -199,13 +196,51 @@
 
         </LinearLayout>
 
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="15dp"-->
+<!--            android:layout_marginEnd="15dp"-->
+<!--            android:orientation="vertical">-->
+
+<!--            <com.google.android.material.textfield.TextInputLayout-->
+<!--                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:hint="@string/NoOfPlants"-->
+<!--                android:textColorHint="@color/black1"-->
+<!--                app:boxStrokeColor="#9BD5AA"-->
+<!--                app:boxStrokeWidth="1dp"-->
+<!--                android:fontFamily="@font/montserrat_medium"-->
+<!--                app:boxStrokeWidthFocused="1dp">-->
+
+<!--                <com.google.android.material.textfield.TextInputEditText-->
+<!--                    android:id="@+id/NoOfPlants"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="match_parent"-->
+<!--                    android:enabled="true"-->
+<!--                    android:digits="1234567890"-->
+<!--                    android:fontFamily="@font/montserrat_medium"-->
+<!--                    android:inputType="textNoSuggestions|textUri"-->
+<!--                    android:longClickable="false"-->
+<!--                    android:maxLength="10"-->
+<!--                    android:text=""-->
+<!--                    android:textColorHint="@color/primary"-->
+<!--                    android:maxLines="1"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textSize="15sp" />-->
+
+<!--            </com.google.android.material.textfield.TextInputLayout>-->
+
+<!--        </LinearLayout>-->
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:orientation="horizontal">
-
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -214,37 +249,11 @@
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-               <!-- <com.google.android.material.textfield.TextInputLayout
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:fontFamily="@font/montserrat_medium"
-                    android:hint="@string/GirthofPlant"
-                    android:textColorHint="@color/black1"
-                    app:boxStrokeColor="#9BD5AA"
-                    app:boxStrokeWidth="1dp"
-                    app:boxStrokeWidthFocused="1dp">
-
-                    <AutoCompleteTextView
-                        android:id="@+id/NoOfPlants"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:inputType="none"
-                        android:focusable="false"
-                        android:maxLength="50"
-                        android:maxLines="1"
-                        android:padding="5dp"
-                        android:textColor="@color/black"
-                        android:textSize="15sp" />
-
-                </com.google.android.material.textfield.TextInputLayout>-->
-
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:hint="@string/NoOfPlants"
+                    android:hint="@string/planttoplantspacing"
                     android:textColorHint="@color/black1"
                     app:boxStrokeColor="#9BD5AA"
                     app:boxStrokeWidth="1dp"
@@ -252,7 +261,7 @@
                     app:boxStrokeWidthFocused="1dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/NoOfPlants"
+                        android:id="@+id/plantspacing"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:enabled="true"
@@ -282,7 +291,7 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:hint="@string/GirthofPlant"
+                    android:hint="@string/rowtorowspacing"
                     android:textColorHint="@color/black1"
                     app:boxStrokeColor="#9BD5AA"
                     app:boxStrokeWidth="1dp"
@@ -290,7 +299,7 @@
                     app:boxStrokeWidthFocused="1dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/GirthofPlant"
+                        android:id="@+id/rowspacing"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:enabled="true"
@@ -355,7 +364,7 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:hint="@string/PlantSpacing"
+                    android:hint="@string/HightofPlant"
                     android:textColorHint="@color/black1"
                     app:boxStrokeColor="#9BD5AA"
                     app:boxStrokeWidth="1dp"
@@ -363,7 +372,7 @@
                     app:boxStrokeWidthFocused="1dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/PlantSpacing"
+                        android:id="@+id/hightofPlant"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:enabled="true"
@@ -392,7 +401,7 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:hint="@string/TotalPlants"
+                    android:hint="@string/GirthofPlant"
                     android:textColorHint="@color/black1"
                     app:boxStrokeColor="#9BD5AA"
                     app:boxStrokeWidth="1dp"
@@ -400,7 +409,7 @@
                     app:boxStrokeWidthFocused="1dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/TotalPlants"
+                        android:id="@+id/girthofPlant"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:enabled="true"
@@ -409,6 +418,7 @@
                         android:inputType="textNoSuggestions|textUri"
                         android:longClickable="false"
                         android:maxLength="10"
+                        android:text=""
                         android:textColorHint="@color/primary"
                         android:maxLines="1"
                         android:padding="5dp"
@@ -428,7 +438,6 @@
             android:layout_marginEnd="10dp"
             android:orientation="horizontal">
 
-
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -440,7 +449,7 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:hint="@string/DatePlantation"
+                    android:hint="@string/standingtrees"
                     android:textColorHint="@color/black1"
                     app:boxStrokeColor="#9BD5AA"
                     app:boxStrokeWidth="1dp"
@@ -448,18 +457,26 @@
                     app:boxStrokeWidthFocused="1dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/DateofPlantation"
+                        android:id="@+id/standingtrees"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:enabled="true"
-                        android:focusable="false"
                         android:fontFamily="@font/montserrat_medium"
                         android:longClickable="false"
-                        android:maxLines="1"
+                        android:inputType="numberDecimal"
                         android:textColorHint="@color/primary"
+                        android:maxLength="12"
+                        android:maxLines="1"
                         android:padding="5dp"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="DatePlantation" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -476,7 +493,7 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:hint="@string/YearPlantation"
+                    android:hint="@string/DateyearPlantation"
                     android:textColorHint="@color/black1"
                     app:boxStrokeColor="#9BD5AA"
                     app:boxStrokeWidth="1dp"
@@ -484,26 +501,18 @@
                     app:boxStrokeWidthFocused="1dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/YearofPlantation"
+                        android:id="@+id/dateofPlantation"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:enabled="true"
                         android:focusable="false"
                         android:fontFamily="@font/montserrat_medium"
                         android:longClickable="false"
-                        android:textColorHint="@color/primary"
-                        android:maxLength="12"
                         android:maxLines="1"
+                        android:textColorHint="@color/primary"
                         android:padding="5dp"
                         android:textColor="@color/black"
                         android:textSize="15sp" />
-
-                    <TextView
-                        android:id="@+id/textView6"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="DatePlantation" />
 
                 </com.google.android.material.textfield.TextInputLayout>
 

@@ -71,6 +71,7 @@
     <string name="SC">অনুসূচিত জাতি</string>
     <string name="BC">খ্ৰীষ্টপূৰ্ব</string>
     <string name="OBC">অ’বিচি</string>
+    <string name="General">সাধাৰণ</string>
     <string name="farmer_name">কৃষকৰ সম্পূৰ্ণ নাম</string>
     <string name="NomineeName">মনোনীত ব্যক্তিৰ নাম</string>
     <string name="gender">লিংগ</string>
@@ -92,8 +93,8 @@
     //Location Screen
     <string name="Patta">পট্টা/আৰ অ’ এফ আৰ/এইচ-নং/পঞ্জীয়ন নং</string>
     <string name="SurveyNo">জৰীপ নং</string>
-    <string name="TotalAcers">মুঠ একৰ</string>
-    <string name="PlantedAcers">ৰোপণ কৰা একৰ</string>
+    <string name="TotalArea">মমুঠ এলেকা(hectare)</string>
+    <string name="PlantedArea">ৰোপণ কৰা অঞ্চল(hectare)</string>
     <string name="state">ৰাজ্য</string>
     <string name="district">জিলা</string>
     <string name="taluka">ব্লক/Mandal</string>
@@ -121,12 +122,19 @@
     <string name="PlantationName">বাগিচাৰ নাম</string>
     <string name="TypeofPlantation">বাগিচাৰ প্ৰকাৰ</string>
     <string name="MixedPlantation">মিশ্ৰিত বাগিচা/শস্য</string>
-    <string name="GirthofPlant">উদ্ভিদের উচ্চতা ও পরিধি</string>
+    <string name="HGirthofPlant">Hight &amp; Girth of Plant</string>
+    <string name="HightofPlant">উদ্ভিদৰ উচ্চতা</string>
+    <string name="GirthofPlant">উদ্ভিদৰ পৰিধি</string>
     <string name="PlantSpacing">উদ্ভিদ ব্যবধান</string>
-    <string name="TotalPlants">মোট গাছপালা</string>
+    <string name="TotalPlants">মোট গাছপালা((hectare))</string>
     <string name="DatePlantation">রোপণের তারিখ</string>
     <string name="YearPlantation">বৃক্ষরোপণের বছর</string>
     <string name="NoOfPlants">উদ্ভিদের সংখ্যা</string>
+
+    <string name="planttoplantspacing">উদ্ভিদৰ পৰা উদ্ভিদৰ ব্যৱধান(mtr)</string>
+    <string name="rowtorowspacing">শাৰীৰ পৰা শাৰীৰ ব্যৱধান(mtr)</string>
+    <string name="standingtrees">বৰ্তমান থিয় হৈ থকা গছ</string>
+    <string name="DateyearPlantation">বাগিচাৰ তাৰিখ আৰু বছৰ</string>
 
     //Bank Account Details
     <string name="AccountName">Account Holder Name</string>

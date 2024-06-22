@@ -35,6 +35,7 @@ import co.kcagroforestry.app.databinding.ActivityBankAccountDetailsBinding
 import co.kcagroforestry.app.network.ApiClient
 import co.kcagroforestry.app.network.ApiInterface
 import co.kcagroforestry.app.utils.CommonData
+import com.bumptech.glide.Glide
 import com.kosherclimate.userapp.TimerData
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.MultipartBody
@@ -97,6 +98,8 @@ class BankAccountDetails : AppCompatActivity() {
         if (bundle != null) {
             unique_id = bundle.getString("farmeruniquid")!!
             StartTime1 = bundle.getInt("StartTime")
+
+
         }
 
         timerData = TimerData(this@BankAccountDetails, binding.textTimer)
@@ -634,5 +637,7 @@ class BankAccountDetails : AppCompatActivity() {
 
         })
     }
+
+
 
 }

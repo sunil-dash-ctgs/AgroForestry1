@@ -60,6 +60,7 @@ import java.util.Date
 
 
 class PlantationInfo : AppCompatActivity() {
+
     lateinit var farmer_back: Button
 
     lateinit var binding: ActivityPlantationInfoBinding
@@ -86,11 +87,17 @@ class PlantationInfo : AppCompatActivity() {
     var mixplanttypeNmaeList = ArrayList<String>()
     var mixplanttypIdList = ArrayList<Int>()
 
+    var plantationNmaeList = ArrayList<String>()
+    var plantationIdList = ArrayList<Int>()
+
     var planttypePosition = 0
     lateinit var planttypeId: String
 
     var mixplanttypePosition = 0
     lateinit var mixplanttypeId: String
+
+    var plantationPosition = 0
+    lateinit var plantationId: String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -122,6 +129,8 @@ class PlantationInfo : AppCompatActivity() {
         getplanttype()
 
         getmixplanttype()
+
+        plantationName()
 
         binding.document1Camera.setOnClickListener {
 
@@ -299,7 +308,7 @@ class PlantationInfo : AppCompatActivity() {
             }
         })
 
-        binding.DateofPlantation.setOnClickListener {
+        binding.dateofPlantation.setOnClickListener {
 
             // Get Current Date
             // Get Current Date
@@ -327,7 +336,7 @@ class PlantationInfo : AppCompatActivity() {
                     val date1 = "$fd / $fm / $year"
                     Log.d("tag", "" + date)
 
-                    binding.DateofPlantation.setText(date1)
+                    binding.dateofPlantation.setText(date1)
                 },
                 mYear,
                 mMonth,
@@ -337,31 +346,31 @@ class PlantationInfo : AppCompatActivity() {
 
         }
 
-        binding.YearofPlantation.setOnClickListener {
-
-            val calendar = Calendar.getInstance()
-            val year = calendar[Calendar.YEAR]
-
-            var choosenYear = year
-
-            val builder = MonthPickerDialog.Builder(this@PlantationInfo,
-                { selectedMonth, selectedYear ->
-                    binding.YearofPlantation.setText(Integer.toString(selectedYear))
-                    choosenYear = selectedYear
-                }, choosenYear, 0
-            )
-
-            builder.showYearOnly()
-                .setYearRange(1990, 2030)
-                .build()
-                .show()
-        }
+//        binding.YearofPlantation.setOnClickListener {
+//
+//            val calendar = Calendar.getInstance()
+//            val year = calendar[Calendar.YEAR]
+//
+//            var choosenYear = year
+//
+//            val builder = MonthPickerDialog.Builder(this@PlantationInfo,
+//                { selectedMonth, selectedYear ->
+//                    binding.YearofPlantation.setText(Integer.toString(selectedYear))
+//                    choosenYear = selectedYear
+//                }, choosenYear, 0
+//            )
+//
+//            builder.showYearOnly()
+//                .setYearRange(1990, 2030)
+//                .build()
+//                .show()
+//        }
 
         binding.plantNext.setOnClickListener {
 
             val WarningDialog = SweetAlertDialog(this@PlantationInfo, SweetAlertDialog.WARNING_TYPE)
 
-            if (binding.PlantationName.text.toString().equals("")) {
+            if (binding.plantationName.text.toString().equals("")) {
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
                 WarningDialog.contentText = "Enter Your Plantation Name"
@@ -382,45 +391,61 @@ class PlantationInfo : AppCompatActivity() {
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            } else if (binding.NoOfPlants.text.toString().equals("")) {
-
-                WarningDialog.titleText = resources.getString(R.string.warning)
-                WarningDialog.contentText = "Enter Your No Of Plants"
-                WarningDialog.confirmText = resources.getString(R.string.ok)
-                WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
-
-            }  else if (binding.GirthofPlant.text.toString().equals("")) {
+//            } else if (binding.NoOfPlants.text.toString().equals("")) {
+//
+//                WarningDialog.titleText = resources.getString(R.string.warning)
+//                WarningDialog.contentText = "Enter Your No Of Plants"
+//                WarningDialog.confirmText = resources.getString(R.string.ok)
+//                WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
+//
+//            }  else if (binding.girthofPlant.text.toString().equals("")) {
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
                 WarningDialog.contentText = "Enter Your Girth of Plant"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            } else if (binding.PlantSpacing.text.toString().equals("")) {
+            } else if (binding.plantspacing.text.toString().equals("")) {
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
-                WarningDialog.contentText = "Enter Your Plant Spacing"
+                WarningDialog.contentText = "Enter Your Plant to Plant Spacing"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            } else if (binding.TotalPlants.text.toString().equals("")) {
+            } else if (binding.rowspacing.text.toString().equals("")) {
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
-                WarningDialog.contentText = "Enter Your Total Plants"
+                WarningDialog.contentText = "Enter Your Row to Row Spacing"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            } else if (binding.DateofPlantation.text.toString().equals("")) {
+            } else if (binding.dateofPlantation.text.toString().equals("")) {
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
                 WarningDialog.contentText = "Enter Date of Plantation"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            } else if (binding.YearofPlantation.text.toString().equals("")) {
+            } else if (binding.standingtrees.text.toString().equals("")) {
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
-                WarningDialog.contentText = "Enter Year of Plantation"
+                WarningDialog.contentText = "Enter Your Current Standing Trees"
+                WarningDialog.confirmText = resources.getString(R.string.ok)
+                WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
+
+            }else if (image1.equals("")){
+                WarningDialog.titleText = resources.getString(R.string.warning)
+                WarningDialog.contentText = "Select Document One Image"
+                WarningDialog.confirmText = resources.getString(R.string.ok)
+                WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
+            }else if (image2.equals("")){
+                WarningDialog.titleText = resources.getString(R.string.warning)
+                WarningDialog.contentText = "Select Document Two Image"
+                WarningDialog.confirmText = resources.getString(R.string.ok)
+                WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
+            }else if (image3.equals("")){
+                WarningDialog.titleText = resources.getString(R.string.warning)
+                WarningDialog.contentText = "Select Document Three Image"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
@@ -810,59 +835,37 @@ class PlantationInfo : AppCompatActivity() {
         val file2 = File(image2)
         val file3 = File(image3)
 
-        val PlantationName: RequestBody =
-            binding.PlantationName.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
+        val PlantationName: RequestBody = plantationId.toString().toRequestBody("text/plain".toMediaTypeOrNull())
         val planttype_Id: RequestBody = planttypeId.toRequestBody("text/plain".toMediaTypeOrNull())
-        val mixplanttype_Id: RequestBody =
-            mixplanttypeId.toRequestBody("text/plain".toMediaTypeOrNull())
-        val NoOfPlants: RequestBody =
-            binding.NoOfPlants.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
-        val GirthofPlant: RequestBody =
-            binding.GirthofPlant.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
-        val PlantSpacing: RequestBody =
-            binding.PlantSpacing.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
-        val TotalPlants: RequestBody =
-            binding.TotalPlants.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
-        val DateofPlantation: RequestBody =
-            binding.DateofPlantation.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
-        val YearofPlantation: RequestBody =
-            binding.YearofPlantation.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
+        val mixplanttype_Id: RequestBody = mixplanttypeId.toRequestBody("text/plain".toMediaTypeOrNull())
+
+        val standingtrees: RequestBody = binding.standingtrees.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
+        val plantspacing: RequestBody = binding.plantspacing.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
+        val rowspacing: RequestBody = binding.rowspacing.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
+        val hightofPlant: RequestBody = binding.hightofPlant.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
+        val girthofPlant: RequestBody = binding.girthofPlant.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
+        val dateofPlantation: RequestBody = binding.dateofPlantation.text.toString().toRequestBody("text/plain".toMediaTypeOrNull())
         val uniqueid: RequestBody = unique_id.toRequestBody("text/plain".toMediaTypeOrNull())
 
-        val requestFileImage1: RequestBody =
-            file1.asRequestBody("multipart/form-data".toMediaTypeOrNull())
-        val requestFileImage2: RequestBody =
-            file2.asRequestBody("multipart/form-data".toMediaTypeOrNull())
-        val requestFileImage3: RequestBody =
-            file3.asRequestBody("multipart/form-data".toMediaTypeOrNull())
+        val requestFileImage1: RequestBody = file1.asRequestBody("multipart/form-data".toMediaTypeOrNull())
+        val requestFileImage2: RequestBody = file2.asRequestBody("multipart/form-data".toMediaTypeOrNull())
+        val requestFileImage3: RequestBody = file3.asRequestBody("multipart/form-data".toMediaTypeOrNull())
 
-        val farmeruniquid: MultipartBody.Part =
-            MultipartBody.Part.createFormData("farmeruniquid", null, uniqueid)
-        val plantation_name: MultipartBody.Part =
-            MultipartBody.Part.createFormData("plantation_name", null, PlantationName)
-        val type_of_plantation: MultipartBody.Part =
-            MultipartBody.Part.createFormData("type_of_plantation", null, planttype_Id)
-        val mixed_plantation: MultipartBody.Part =
-            MultipartBody.Part.createFormData("mixed_plantation", null, mixplanttype_Id)
-        val no_of_plants: MultipartBody.Part =
-            MultipartBody.Part.createFormData("no_of_plants", null, NoOfPlants)
-        val girth_of_plant: MultipartBody.Part =
-            MultipartBody.Part.createFormData("girth_of_plant", null, GirthofPlant)
-        val plant_spacing: MultipartBody.Part =
-            MultipartBody.Part.createFormData("plant_spacing", null, PlantSpacing)
-        val total_plants: MultipartBody.Part =
-            MultipartBody.Part.createFormData("total_plants", null, TotalPlants)
-        val date_of_plantation: MultipartBody.Part =
-            MultipartBody.Part.createFormData("date_of_plantation", null, DateofPlantation)
-        val year_of_plantation: MultipartBody.Part =
-            MultipartBody.Part.createFormData("year_of_plantation", null, YearofPlantation)
+        val farmeruniquid: MultipartBody.Part = MultipartBody.Part.createFormData("farmeruniquid", null, uniqueid)
+        val plantation_name: MultipartBody.Part = MultipartBody.Part.createFormData("plantation_name", null, PlantationName)
+        val type_of_plantation: MultipartBody.Part = MultipartBody.Part.createFormData("type_of_plantation", null, planttype_Id)
+        val mixed_plantation: MultipartBody.Part = MultipartBody.Part.createFormData("mixed_plantation", null, mixplanttype_Id)
 
-        val ImageBody1: MultipartBody.Part =
-            MultipartBody.Part.createFormData("document1_photo", file1.name, requestFileImage1)
-        val ImageBody2: MultipartBody.Part =
-            MultipartBody.Part.createFormData("document2_photo", file2.name, requestFileImage2)
-        val ImageBody3: MultipartBody.Part =
-            MultipartBody.Part.createFormData("document3_photo", file3.name, requestFileImage3)
+        val standing_trees: MultipartBody.Part = MultipartBody.Part.createFormData("Current_Standing_Trees", null, standingtrees)
+        val plant_spacing: MultipartBody.Part = MultipartBody.Part.createFormData("planttoplantspacing", null, plantspacing)
+        val row_spacing: MultipartBody.Part = MultipartBody.Part.createFormData("rowtorowspacing", null, rowspacing)
+        val height_Plant: MultipartBody.Part = MultipartBody.Part.createFormData("hightofPlant", null, hightofPlant)
+        val girth_Plant: MultipartBody.Part = MultipartBody.Part.createFormData("girthofPlant", null, girthofPlant)
+        val date_Plantation: MultipartBody.Part = MultipartBody.Part.createFormData("dateyearofPlantation", null, dateofPlantation)
+
+        val ImageBody1: MultipartBody.Part = MultipartBody.Part.createFormData("document1_photo", file1.name, requestFileImage1)
+        val ImageBody2: MultipartBody.Part = MultipartBody.Part.createFormData("document2_photo", file2.name, requestFileImage2)
+        val ImageBody3: MultipartBody.Part = MultipartBody.Part.createFormData("document3_photo", file3.name, requestFileImage3)
 
         val apiInterface = ApiClient.getRetrofitInstance().create(ApiInterface::class.java)
         val submitplantinfo = apiInterface.submitPlantationinfo(
@@ -871,22 +874,21 @@ class PlantationInfo : AppCompatActivity() {
             plantation_name,
             type_of_plantation,
             mixed_plantation,
-            no_of_plants,
-            girth_of_plant,
-            plant_spacing,
-            total_plants,
-            date_of_plantation,
-            year_of_plantation,
             ImageBody1,
             ImageBody2,
-            ImageBody3
+            ImageBody3,
+            standing_trees,
+            plant_spacing,
+            row_spacing,
+            height_Plant,
+            girth_Plant,
+            date_Plantation
         )
 
         submitplantinfo.enqueue(object : Callback<ResponseBody> {
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
 
                 progress.dismiss()
-
                 if (response.body() != null) {
 
                     if (response.code() == 200) {
@@ -913,5 +915,66 @@ class PlantationInfo : AppCompatActivity() {
             }
 
         })
+    }
+
+    fun plantationName(){
+
+        val apiInterface = ApiClient.getRetrofitInstance().create(ApiInterface::class.java)
+        apiInterface.plantationname("Bearer $token").enqueue(object: Callback<ResponseBody>{
+            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
+
+                plantationNmaeList.clear()
+                plantationIdList.clear()
+
+               if (response.body() != null){
+
+                   if (response.code() == 200){
+
+                       plantationNmaeList.add("--Select--")
+                       plantationIdList.add(0)
+
+                       val jsonResponse = JSONObject(response.body()!!.string())
+                       val stateArray = jsonResponse.optJSONArray("list")
+
+                       for (i in 0 until stateArray.length()) {
+
+                           val jsonState = stateArray.getJSONObject(i)
+                           val id = jsonState.optInt("id")
+                           val plantation_name = jsonState.optString("plantation_name")
+
+                           plantationNmaeList.add(plantation_name)
+                           plantationIdList.add(id)
+                       }
+
+                       plantationSpinner()
+
+                   }
+               }
+            }
+
+            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
+                Toast.makeText(this@PlantationInfo, "Please Retry", Toast.LENGTH_SHORT).show()
+            }
+
+        })
+
+    }
+
+    private fun plantationSpinner() {
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, plantationNmaeList)
+        binding.plantationName.setText(adapter.getItem(0));
+        binding.plantationName.setAdapter(adapter)
+        binding.plantationName.onItemClickListener = object : AdapterView.OnItemClickListener {
+            override fun onItemClick(
+                parent: AdapterView<*>?, arg1: View?, position: Int,
+                id: Long
+            ) {
+                plantationPosition = position
+                Log.e("stateposition", plantationPosition.toString())
+                if (position != 0) {
+                    plantationId = plantationIdList[plantationPosition].toString()
+                }
+            }
+        }
     }
 }

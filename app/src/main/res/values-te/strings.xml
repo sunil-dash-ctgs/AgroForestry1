@@ -61,6 +61,7 @@
     <string name="BC">క్రీ.పూ</string>
     <string name="Age">వయస్సు</string>
     <string name="OBC">OBC</string>
+    <string name="General">జనరల్</string>
     <string name="farmer_name">రైతు పూర్తి పేరు</string>
     <string name="NomineeName">నామినీ పేరు</string>
     <string name="gender">లింగం</string>
@@ -79,8 +80,8 @@
     //Location Screen
     <string name="Patta">పట్టా/ROFR/H-No/రిజిస్ట్రేషన్ నం</string>
     <string name="SurveyNo">సర్వే నెం</string>
-    <string name="TotalAcers">మొత్తం ఎకరాలు</string>
-    <string name="PlantedAcers">ఎకరాల్లో నాటారు</string>
+    <string name="TotalArea">మొత్తం ప్రాంతం(Hector)</string>
+    <string name="PlantedArea">నాటిన ప్రాంతం(Hector)</string>
     <string name="state">రాష్ట్రం</string>
     <string name="district">జిల్లా</string>
 <!--    <string name="taluka">తాలూకా/తహసీల్</string>-->
@@ -109,12 +110,19 @@
     <string name="PlantationName">ప్లాంటేషన్ పేరు</string>
     <string name="TypeofPlantation">ప్లాంటేషన్ రకం</string>
     <string name="MixedPlantation">మిశ్రమ ప్లాంటేషన్/పంట</string>
-    <string name="GirthofPlant">మొక్క ఎత్తు &amp; నాడా</string>
+    <string name="HGirthofPlant">మొక్క యొక్క ఎత్తు మరియు నాడా</string>
+    <string name="HightofPlant">మొక్క యొక్క ఎత్తు</string>
+    <string name="GirthofPlant">మొక్క యొక్క నాడా</string>
     <string name="PlantSpacing">మొక్కల అంతరం</string>
-    <string name="TotalPlants">మొత్తం మొక్కలు</string>
+    <string name="TotalPlants">మొత్తం మొక్కలు(hectare)</string>
     <string name="DatePlantation">ప్లాంటేషన్ తేదీ</string>
     <string name="YearPlantation">ప్లాంటేషన్ సంవత్సరం</string>
     <string name="NoOfPlants">మొక్కల సంఖ్య</string>
+
+    <string name="planttoplantspacing">మొక్కలు నాటడానికి అంతరం (మీ.)</string>
+    <string name="rowtorowspacing">వరుస నుండి వరుస అంతరం (మీ.)</string>
+    <string name="standingtrees">ప్రస్తుత నిలబడి ఉన్న చెట్లు</string>
+    <string name="DateyearPlantation">ప్లాంటేషన్ తేదీ &amp; సంవత్సరం</string>
 
     //Bank Account Details
     <string name="AccountName">ఖాతాదారుని పేరు</string>

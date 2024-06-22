@@ -733,6 +733,10 @@ class PlotPhotoDetails : AppCompatActivity() {
         val latitude: RequestBody = "".toRequestBody("text/plain".toMediaTypeOrNull())
         val longitude: RequestBody = "".toRequestBody("text/plain".toMediaTypeOrNull())
 
+        val plant_height: RequestBody = "".toRequestBody("text/plain".toMediaTypeOrNull())
+        val plant_girth: RequestBody = "".toRequestBody("text/plain".toMediaTypeOrNull())
+        val current_standing: RequestBody = "".toRequestBody("text/plain".toMediaTypeOrNull())
+
         val requestFileImage1: RequestBody =
             file1.asRequestBody("multipart/form-data".toMediaTypeOrNull())
         val requestFileImage2: RequestBody =
@@ -753,6 +757,14 @@ class PlotPhotoDetails : AppCompatActivity() {
         val longitude1: MultipartBody.Part =
             MultipartBody.Part.createFormData("longitude", null, longitude)
 
+        val plantheight: MultipartBody.Part =
+            MultipartBody.Part.createFormData("plant_height", null, plant_height)
+        val plantgirth: MultipartBody.Part =
+            MultipartBody.Part.createFormData("plant_girth", null, plant_girth)
+        val currentstanding: MultipartBody.Part =
+            MultipartBody.Part.createFormData("current_standing", null, current_standing)
+
+
         val ImageBody1: MultipartBody.Part =
             MultipartBody.Part.createFormData("document_1", file1.name, requestFileImage1)
         val ImageBody2: MultipartBody.Part =
@@ -764,7 +776,7 @@ class PlotPhotoDetails : AppCompatActivity() {
 
         val submitbank = apiInterface.polygonImageSubmit(
             "Bearer $token", farmeruniquid, holder_name, visitno, latitude1, longitude1,
-            ImageBody1, ImageBody2, ImageBody3, status
+            ImageBody1, ImageBody2, ImageBody3, status, plantheight, plantgirth, currentstanding
         )
 
         submitbank.enqueue(object : Callback<ResponseBody> {

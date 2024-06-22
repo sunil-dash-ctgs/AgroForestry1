@@ -291,6 +291,15 @@
                         android:paddingHorizontal="5dp"
                         android:text="@string/OBC" />
 
+                    <RadioButton
+                        android:id="@+id/assam_General"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:paddingHorizontal="5dp"
+                        android:text="@string/General" />
+
 
                 </RadioGroup>
 

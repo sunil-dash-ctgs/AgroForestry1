@@ -273,8 +273,8 @@
                         android:id="@+id/irrigationradioGroup3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="3">
+                        android:orientation="vertical"
+                        android:weightSum="6">
 
                         <RadioButton
                             android:id="@+id/assam_radioDrip"
@@ -285,7 +285,6 @@
                             android:fontFamily="@font/montserrat_medium"
                             android:paddingHorizontal="5dp"
                             android:text="Drip" />
-
 
                         <RadioButton
                             android:id="@+id/assam_radioFlood"
@@ -305,8 +304,73 @@
                             android:paddingHorizontal="5dp"
                             android:text="Rainy" />
 
+                        <RadioButton
+                            android:id="@+id/radioWell"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:paddingHorizontal="5dp"
+                            android:text="Well" />
+
+                        <RadioButton
+                            android:id="@+id/radioCanal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:paddingHorizontal="5dp"
+                            android:text="Canal" />
+
+                        <RadioButton
+                            android:id="@+id/radioTubewell"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:paddingHorizontal="5dp"
+                            android:text="Tube well" />
+
 
                     </RadioGroup>
+
+<!--                    <RadioGroup-->
+<!--                        android:id="@+id/irrigationradioGroup"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:orientation="horizontal"-->
+<!--                        android:weightSum="3"-->
+<!--                        android:layout_marginTop="5dp">-->
+
+<!--                        <RadioButton-->
+<!--                            android:id="@+id/radioWell"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:fontFamily="@font/montserrat_medium"-->
+<!--                            android:paddingHorizontal="5dp"-->
+<!--                            android:text="Well" />-->
+
+<!--                        <RadioButton-->
+<!--                            android:id="@+id/radioCanal"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:fontFamily="@font/montserrat_medium"-->
+<!--                            android:paddingHorizontal="5dp"-->
+<!--                            android:text="Canal" />-->
+
+<!--                        <RadioButton-->
+<!--                            android:id="@+id/radioTubewell"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_weight="1"-->
+<!--                            android:fontFamily="@font/montserrat_medium"-->
+<!--                            android:paddingHorizontal="5dp"-->
+<!--                            android:text="Tube well" />-->
+
+
+<!--                    </RadioGroup>-->
 
 
                 </LinearLayout>

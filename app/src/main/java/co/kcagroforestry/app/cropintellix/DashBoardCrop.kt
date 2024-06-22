@@ -31,6 +31,7 @@ import co.kcagroforestry.app.R
 import co.kcagroforestry.app.databinding.ActivityDashBoardCropBinding
 import co.kcagroforestry.app.network.ApiClient
 import co.kcagroforestry.app.network.ApiInterface
+import co.kcagroforestry.app.updateinfo.FarmerOnBoardingUpdate
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import okhttp3.ResponseBody
@@ -121,6 +122,9 @@ class DashBoardCrop : AppCompatActivity() {
         }
         revistplotdetail.setOnClickListener {
             startActivity(Intent(this@DashBoardCrop,RevisitDeatails::class.java))
+        }
+        updateinfo.setOnClickListener {
+            startActivity(Intent(this@DashBoardCrop,FarmerOnBoardingUpdate::class.java))
         }
 
        /* binding.assamFarmerBack.setOnClickListener {
