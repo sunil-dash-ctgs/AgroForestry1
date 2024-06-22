@@ -421,7 +421,7 @@ class FarmerOnBoardingUpdate : AppCompatActivity() {
                     call: Call<ResponseBody>, response: Response<ResponseBody>
                 ) {
 
-                    if (response.body() != null) {
+                 //   if (response.body() != null) {
 
                         progress.dismiss()
 
@@ -534,9 +534,6 @@ class FarmerOnBoardingUpdate : AppCompatActivity() {
                                 WarningDialog.setCancelable(false)
                                 WarningDialog.setConfirmClickListener {
                                     WarningDialog.cancel()
-
-                                    backScreen()
-
                                 }.show()
                             }
 
@@ -548,7 +545,7 @@ class FarmerOnBoardingUpdate : AppCompatActivity() {
                                 ).show()
                             }
                         }
-                    }
+                  //  }
 
                 }
 

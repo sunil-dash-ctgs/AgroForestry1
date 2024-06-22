@@ -227,7 +227,7 @@ class CultivationInfoUpdate : AppCompatActivity() {
                     call: Call<ResponseBody>, response: Response<ResponseBody>
                 ) {
 
-                    if (response.body() != null) {
+                   // if (response.body() != null) {
 
                         progress.dismiss()
 
@@ -319,9 +319,6 @@ class CultivationInfoUpdate : AppCompatActivity() {
                                 WarningDialog.setCancelable(false)
                                 WarningDialog.setConfirmClickListener {
                                     WarningDialog.cancel()
-
-                                    backScreen()
-
                                 }.show()
                             }
 
@@ -333,7 +330,7 @@ class CultivationInfoUpdate : AppCompatActivity() {
                                 ).show()
                             }
                         }
-                    }
+                 //   }
 
                 }
 

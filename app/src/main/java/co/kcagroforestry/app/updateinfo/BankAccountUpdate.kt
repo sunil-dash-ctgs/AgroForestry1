@@ -201,7 +201,7 @@ class BankAccountUpdate : AppCompatActivity() {
                     call: Call<ResponseBody>, response: Response<ResponseBody>
                 ) {
 
-                    if (response.body() != null) {
+                   // if (response.body() != null) {
 
                         progress.dismiss()
 
@@ -242,9 +242,7 @@ class BankAccountUpdate : AppCompatActivity() {
                                 binding.Branch.text = branch.toEditable()
                                 binding.NameOfTheBank.text = bank_name.toEditable()
 
-                            }
-
-                            423 -> {
+                            }423 -> {
 
                                 progress.dismiss()
 
@@ -253,15 +251,12 @@ class BankAccountUpdate : AppCompatActivity() {
                                 )
 
                                 WarningDialog.titleText = resources.getString(R.string.warning)
-                                WarningDialog.contentText = "Farmer Onboarding not \n Completed"
+                                WarningDialog.contentText = "Data Not Found"
                                 WarningDialog.confirmText = " OK "
                                 WarningDialog.showCancelButton(false)
                                 WarningDialog.setCancelable(false)
                                 WarningDialog.setConfirmClickListener {
                                     WarningDialog.cancel()
-
-                                    backScreen()
-
                                 }.show()
                             }
 
@@ -273,7 +268,7 @@ class BankAccountUpdate : AppCompatActivity() {
                                 ).show()
                             }
                         }
-                    }
+                    //}
 
                 }
 

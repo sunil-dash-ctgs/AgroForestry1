@@ -369,7 +369,7 @@ class PlantationInfoUpdate : AppCompatActivity() {
         val farmeruniquid: MultipartBody.Part =
             MultipartBody.Part.createFormData("farmeruniquid", null, uniqueid)
         val plantation_name: MultipartBody.Part =
-            MultipartBody.Part.createFormData("plantation_name", null, PlantationName)
+            MultipartBody.Part.createFormData("plantation_id", null, PlantationName)
         val type_of_plantation: MultipartBody.Part =
             MultipartBody.Part.createFormData("type_of_plantation", null, planttype_Id)
         val mixed_plantation: MultipartBody.Part =
@@ -517,7 +517,7 @@ class PlantationInfoUpdate : AppCompatActivity() {
                     call: Call<ResponseBody>, response: Response<ResponseBody>
                 ) {
 
-                    if (response.body() != null) {
+                 //   if (response.body() != null) {
 
                         progress.dismiss()
 
@@ -604,9 +604,6 @@ class PlantationInfoUpdate : AppCompatActivity() {
                                 WarningDialog.setCancelable(false)
                                 WarningDialog.setConfirmClickListener {
                                     WarningDialog.cancel()
-
-                                    backScreen()
-
                                 }.show()
                             }
 
@@ -618,7 +615,7 @@ class PlantationInfoUpdate : AppCompatActivity() {
                                 ).show()
                             }
                         }
-                    }
+                //    }
 
                 }
 

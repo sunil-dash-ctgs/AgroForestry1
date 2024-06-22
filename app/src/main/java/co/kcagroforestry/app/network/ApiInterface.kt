@@ -150,7 +150,7 @@ interface ApiInterface {
     fun submitPlantationinfo(
         @Header("Authorization") token: String,
         @Part farmeruniquid: MultipartBody.Part,
-        @Part plantation_name: MultipartBody.Part,
+        @Part plantation_id: MultipartBody.Part,
         @Part type_of_plantation: MultipartBody.Part,
         @Part mixed_plantation: MultipartBody.Part,
         @Part no_of_plants: MultipartBody.Part,
@@ -312,7 +312,7 @@ interface ApiInterface {
     fun updatefarmerplantation(
         @Header("Authorization") token: String,
         @Part farmeruniquid: MultipartBody.Part,
-        @Part plantation_name: MultipartBody.Part,
+        @Part plantation_id: MultipartBody.Part,
         @Part type_of_plantation: MultipartBody.Part,
         @Part mixed_plantation: MultipartBody.Part,
         @Part no_of_plants: MultipartBody.Part,

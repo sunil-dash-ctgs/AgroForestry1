@@ -198,7 +198,7 @@ class LocationInfoUpdate : AppCompatActivity() {
                     call: Call<ResponseBody>, response: Response<ResponseBody>
                 ) {
 
-                    if (response.body() != null) {
+                  //  if (response.body() != null) {
 
                         progress.dismiss()
 
@@ -298,9 +298,6 @@ class LocationInfoUpdate : AppCompatActivity() {
                                 WarningDialog.setCancelable(false)
                                 WarningDialog.setConfirmClickListener {
                                     WarningDialog.cancel()
-
-                                    backScreen()
-
                                 }.show()
                             }
 
@@ -312,7 +309,7 @@ class LocationInfoUpdate : AppCompatActivity() {
                                 ).show()
                             }
                         }
-                    }
+                //    }
 
                 }
 

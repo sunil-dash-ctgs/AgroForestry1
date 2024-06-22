@@ -852,7 +852,7 @@ class PlantationInfo : AppCompatActivity() {
         val requestFileImage3: RequestBody = file3.asRequestBody("multipart/form-data".toMediaTypeOrNull())
 
         val farmeruniquid: MultipartBody.Part = MultipartBody.Part.createFormData("farmeruniquid", null, uniqueid)
-        val plantation_name: MultipartBody.Part = MultipartBody.Part.createFormData("plantation_name", null, PlantationName)
+        val plantation_name: MultipartBody.Part = MultipartBody.Part.createFormData("plantation_id", null, PlantationName)
         val type_of_plantation: MultipartBody.Part = MultipartBody.Part.createFormData("type_of_plantation", null, planttype_Id)
         val mixed_plantation: MultipartBody.Part = MultipartBody.Part.createFormData("mixed_plantation", null, mixplanttype_Id)
 
