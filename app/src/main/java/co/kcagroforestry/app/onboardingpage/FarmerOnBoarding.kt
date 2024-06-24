@@ -275,98 +275,97 @@ class FarmerOnBoarding : AppCompatActivity() {
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            }else if (binding.assamFarmerAge.text.toString().equals("")){
+            } else if (binding.assamFarmerAge.text.toString().equals("")){
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
                 WarningDialog.contentText = "Enter Your Age"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            }else if (binding.assamGuardianName.text.toString().equals("")){
+            } else if (binding.assamGuardianName.text.toString().equals("")){
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
                 WarningDialog.contentText = "Fill Your Guardian Name"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            }else if (binding.assamMobileAccess.text.toString().equals("--Select--")){
+            } else if (binding.assamMobileAccess.text.toString().equals("--Select--")){
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
                 WarningDialog.contentText = "Select You Nominee_name"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            }else if (binding.assamMobile.text.toString().equals("")){
+            } else if (binding.assamMobile.text.toString().equals("")){
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
                 WarningDialog.contentText = "Enter Your Mobile No"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            }else if (binding.assamMobile.text.toString().length < 10) {
+            } else if (binding.assamMobile.text.toString().length < 10) {
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
                 WarningDialog.contentText = resources.getString(R.string.mobile_length_warning)
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            }else if (binding.nomineName.text.toString().equals("")){
+            } else if (binding.nomineName.text.toString().equals("")){
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
                 WarningDialog.contentText = "Enter Your Nominee Name"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            }else if (binding.assamWhatesappno.text.toString().equals("")){
+            } else if (binding.assamWhatesappno.text.toString().equals("")){
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
                 WarningDialog.contentText = "Enter Your WastesApp No"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            }else if (binding.assamAadharno.text.toString().equals("")){
+            } else if (binding.assamAadharno.text.toString().equals("")){
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
                 WarningDialog.contentText = "Enter Your Aadhaar No"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            }else if (binding.assamAadharno.text.toString().equals("")){
+            } else if (binding.assamAadharno.text.toString().equals("")){
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
                 WarningDialog.contentText = "Enter Your Aadhaar No"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            }else if (binding.farmeruniqueId.text.toString().equals("")){
+            } else if (binding.farmeruniqueId.text.toString().equals("")){
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
                 WarningDialog.contentText = "Fill the UniqueId"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            }else if (image1.equals("")){
-
+            } else if (image1.equals("")){
                 WarningDialog.titleText = resources.getString(R.string.warning)
-                WarningDialog.contentText = "Select Document One Image"
+                WarningDialog.contentText = "Select ID Proof Front Image"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            }else if (image2.equals("")){
+            } else if (image2.equals("")){
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
-                WarningDialog.contentText = "Select Document Two Image"
+                WarningDialog.contentText = "Select ID Proof Back Image"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            }else if (image3.equals("")){
+            } else if (image3.equals("")){
 
                 WarningDialog.titleText = resources.getString(R.string.warning)
-                WarningDialog.contentText = "Select Document Three Image"
+                WarningDialog.contentText = "Select Other Document Image"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
-            }else{
+            } else{
 
                 submitOnBording()
             }

@@ -366,17 +366,17 @@ class LocationInfo : AppCompatActivity() {
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
             }else if (image1.equals("")){
                 WarningDialog.titleText = resources.getString(R.string.warning)
-                WarningDialog.contentText = "Select Document One Image"
+                WarningDialog.contentText = "Select Land record Copy 1 Image"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
             }else if (image2.equals("")){
                 WarningDialog.titleText = resources.getString(R.string.warning)
-                WarningDialog.contentText = "Select Document Two Image"
+                WarningDialog.contentText = "Select Land record Copy 2 Image"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
             }else if (image3.equals("")){
                 WarningDialog.titleText = resources.getString(R.string.warning)
-                WarningDialog.contentText = "Select Document Three Image"
+                WarningDialog.contentText = "Select Land record Copy 3 Image"
                 WarningDialog.confirmText = resources.getString(R.string.ok)
                 WarningDialog.setCancelClickListener { WarningDialog.cancel() }.show()
 
