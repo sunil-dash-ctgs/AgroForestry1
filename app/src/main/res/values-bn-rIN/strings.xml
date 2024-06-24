@@ -455,6 +455,17 @@
 
     <string name="documenttype"> নথিপত্র ধরণ </string>
     <string name="howmanyseasons"> ততিনি কত ঋতু অনুসরণ করছেন </string>
+    <string name="id_proof_front">আইডি প্রুফ ফ্রন্ট</string>
+    <string name="id_proof_back">আইডি প্রুফ ব্যাক</string>
+    <string name="other_document">অন্যান্য নথি</string>
+    <string name="land_record_copy_1">জমির রেকর্ড কপি সামনে/পিছনে 1</string>
+    <string name="land_record_copy_2">জমির রেকর্ড কপি সামনে/পিছনে 2</string>
+    <string name="land_record_copy_3">জমির রেকর্ড কপি সামনে/পিছনে 3</string>
+    <string name="single_tree_picture">একক গাছের ছবি</string>
+    <string name="entire_farm_picture">পুরো খামারের ছবি</string>
+    <string name="farm_picture_to_understand_the_model_of_plantation">বৃক্ষরোপণের মডেল বোঝার জন্য খামারের ছবি</string>
+    <string name="declaration_form_front">ঘোষণাপত্র ফরম ফ্রন্ট</string>
+    <string name="declaration_form_back">ঘোষণাপত্র ফেরত</string>
 
 
 </resources>

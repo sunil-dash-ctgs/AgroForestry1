@@ -462,6 +462,17 @@
     <string name="howmanyseasons"> How Many Seasons he/she is Following </string>
     <string name="title_activity_capture_data">CaptureData</string>
     <string name="title_activity_capture_data_revisit">CaptureDataRevisit</string>
+    <string name="id_proof_front">ID Proof Front</string>
+    <string name="id_proof_back">ID Proof Back</string>
+    <string name="other_document">Other Document</string>
+    <string name="land_record_copy_1">Land Record Copy Front/Back 1</string>
+    <string name="land_record_copy_2">Land Record Copy Front/Back 2</string>
+    <string name="land_record_copy_3">Land Record Copy Front/Back 3</string>
+    <string name="single_tree_picture">Single tree picture</string>
+    <string name="entire_farm_picture">Entire Farm Picture</string>
+    <string name="farm_picture_to_understand_the_model_of_plantation">Farm picture to understand the model of plantation</string>
+    <string name="declaration_form_front">Declaration Form Front</string>
+    <string name="declaration_form_back">Declaration Form Back</string>
 
 
 </resources>

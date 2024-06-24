@@ -446,6 +446,17 @@
 
     <string name="documenttype"> దస్తావేజు పద్దతి </string>
     <string name="howmanyseasons"> అతను/ఆమె ఎన్ని సీజన్‌లను అనుసరిస్తున్నారు </string>
+    <string name="id_proof_front">ID ప్రూఫ్ ఫ్రంట్</string>
+    <string name="id_proof_back">ID ప్రూఫ్ తిరిగి</string>
+    <string name="other_document">ఇతర పత్రం</string>
+    <string name="land_record_copy_1">ల్యాండ్ రికార్డ్ కాపీ ముందు/వెనుక 1</string>
+    <string name="land_record_copy_2">ల్యాండ్ రికార్డ్ కాపీ ముందు/వెనుక 2</string>
+    <string name="land_record_copy_3">ల్యాండ్ రికార్డ్ కాపీ ముందు/వెనుక 3</string>
+    <string name="single_tree_picture">ఒకే చెట్టు చిత్రం</string>
+    <string name="entire_farm_picture">మొత్తం వ్యవసాయ చిత్రం</string>
+    <string name="farm_picture_to_understand_the_model_of_plantation">తోటల నమూనాను అర్థం చేసుకోవడానికి వ్యవసాయ చిత్రం</string>
+    <string name="declaration_form_front">డిక్లరేషన్ ఫారమ్ ముందు</string>
+    <string name="declaration_form_back">డిక్లరేషన్ ఫారం తిరిగి</string>
 
 
 </resources>

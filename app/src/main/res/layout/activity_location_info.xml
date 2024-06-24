@@ -612,10 +612,10 @@
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginEnd="5dp"
-                            android:layout_marginBottom="5dp"
                             android:fontFamily="@font/montserrat_medium"
-                            android:maxLines="1"
-                            android:text="Document 1"></TextView>
+                            android:maxLines="3"
+                            android:ellipsize="end"
+                            android:text="@string/land_record_copy_1"></TextView>
 
                         <ImageView
                             android:id="@+id/document1_camera"
@@ -623,7 +623,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
-                            android:layout_marginTop="20dp"
                             android:orientation="horizontal"
                             android:src="@drawable/photo_camera"></ImageView>
 
@@ -661,17 +660,16 @@
                             android:layout_marginStart="5dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginEnd="5dp"
-                            android:layout_marginBottom="5dp"
                             android:fontFamily="@font/montserrat_medium"
-                            android:maxLines="4"
-                            android:text="Document 2"></TextView>
+                            android:maxLines="3"
+                            android:ellipsize="end"
+                            android:text="@string/land_record_copy_2"></TextView>
 
                         <ImageView
                             android:id="@+id/document2_camera"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
-                            android:layout_marginTop="20dp"
                             android:orientation="horizontal"
                             android:src="@drawable/photo_camera"
                             android:layout_below="@+id/name1"></ImageView>
@@ -710,10 +708,10 @@
                             android:layout_marginStart="5dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginEnd="5dp"
-                            android:layout_marginBottom="5dp"
                             android:fontFamily="@font/montserrat_medium"
-                            android:maxLines="1"
-                            android:text="Document 3"></TextView>
+                            android:maxLines="3"
+                            android:ellipsize="end"
+                            android:text="@string/land_record_copy_3"></TextView>
 
                         <ImageView
                             android:id="@+id/document3_camera"
@@ -721,8 +719,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
-                            android:layout_marginTop="20dp"
-                            android:background="@drawable/editext_bg"
                             android:orientation="horizontal"
                             android:src="@drawable/photo_camera"></ImageView>
 

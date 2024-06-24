@@ -449,6 +449,17 @@
 
     <string name="documenttype"> दस्तावेज़ का प्रकार </string>
     <string name="howmanyseasons"> वह कितने सीज़न का पालन कर रहा है </string>
+    <string name="id_proof_front">आईडी प्रूफ सामने</string>
+    <string name="id_proof_back">आईडी प्रूफ पीछे</string>
+    <string name="other_document">अन्य दस्तावेज़</string>
+    <string name="land_record_copy_1">भूमि रिकार्ड प्रतिलिपि आगे/पीछे 1</string>
+    <string name="land_record_copy_2">भूमि रिकार्ड प्रतिलिपि आगे/पीछे 2</string>
+    <string name="land_record_copy_3">भूमि रिकार्ड प्रतिलिपि आगे/पीछे 3</string>
+    <string name="single_tree_picture">एक वृक्ष चित्र</string>
+    <string name="entire_farm_picture">पूरे खेत की तस्वीर</string>
+    <string name="farm_picture_to_understand_the_model_of_plantation">वृक्षारोपण के मॉडल को समझने के लिए खेत का चित्र</string>
+    <string name="declaration_form_front">घोषणा पत्र आगे</string>
+    <string name="declaration_form_back">घोषणा पत्र पीछे</string>
 
 
 </resources>

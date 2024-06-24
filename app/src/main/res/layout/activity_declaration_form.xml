@@ -299,14 +299,13 @@
                                 android:layout_marginBottom="5dp"
                                 android:fontFamily="@font/montserrat_medium"
                                 android:maxLines="4"
-                                android:text="Declaration Form"></TextView>
+                                android:text="@string/declaration_form_front"></TextView>
 
                             <ImageView
                                 android:id="@+id/declaration_camera"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
-                                android:layout_marginTop="20dp"
                                 android:orientation="horizontal"
                                 android:src="@drawable/photo_camera"
                                 android:layout_below="@+id/name1"></ImageView>
@@ -347,8 +346,8 @@
                                 android:layout_marginEnd="5dp"
                                 android:layout_marginBottom="5dp"
                                 android:fontFamily="@font/montserrat_medium"
-                                android:maxLines="1"
-                                android:text="Others"></TextView>
+                                android:maxLines="2"
+                                android:text="@string/declaration_form_back"></TextView>
 
                             <ImageView
                                 android:id="@+id/other_camera"
@@ -356,7 +355,6 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_gravity="center"
-                                android:layout_marginTop="20dp"
                                 android:orientation="horizontal"
                                 android:src="@drawable/photo_camera"></ImageView>
 

@@ -454,6 +454,17 @@
 
     <string name="documenttype"> নথিপত্ৰৰ ধৰণ </string>
     <string name="howmanyseasons"> তেওঁ/তাই কিমান ছিজন অনুসৰণ কৰি আছে </string>
+    <string name="id_proof_front">আইডি প্ৰুফ ফ্ৰন্ট</string>
+    <string name="id_proof_back">আইডি প্ৰমাণ পিছলৈ</string>
+    <string name="other_document">অন্যান্য নথিপত্ৰ</string>
+    <string name="land_record_copy_1">ভূমি ৰেকৰ্ড কপি সন্মুখ/পিছলৈ 1</string>
+    <string name="land_record_copy_2">ভূমি ৰেকৰ্ড কপি সন্মুখ/পিছলৈ 2</string>
+    <string name="land_record_copy_3">ভূমি ৰেকৰ্ড কপি সন্মুখ/পিছলৈ 3</string>
+    <string name="single_tree_picture">একক গছৰ ছবি</string>
+    <string name="entire_farm_picture">সমগ্ৰ পামৰ ছবি</string>
+    <string name="farm_picture_to_understand_the_model_of_plantation">বাগিচাৰ আৰ্হি বুজিবলৈ পামৰ ছবি</string>
+    <string name="declaration_form_front">ঘোষণা প্ৰপত্ৰ ফ্ৰন্ট</string>
+    <string name="declaration_form_back">ঘোষণা প্ৰপত্ৰ উভতি</string>
 
 
 </resources>

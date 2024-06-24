@@ -547,10 +547,10 @@
                             android:layout_marginLeft="5dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginEnd="5dp"
-                            android:layout_marginBottom="5dp"
                             android:fontFamily="@font/montserrat_medium"
                             android:maxLines="1"
-                            android:text="Document 1"></TextView>
+                            android:ellipsize="end"
+                            android:text="@string/single_tree_picture"></TextView>
 
                         <ImageView
                             android:id="@+id/document1_camera"
@@ -558,8 +558,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
-                            android:layout_marginTop="20dp"
                             android:orientation="horizontal"
+                            android:layout_marginTop="5dp"
                             android:src="@drawable/photo_camera"></ImageView>
 
                         <ImageView
@@ -598,17 +598,16 @@
                             android:layout_marginStart="5dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginEnd="5dp"
-                            android:layout_marginBottom="5dp"
                             android:fontFamily="@font/montserrat_medium"
-                            android:maxLines="4"
-                            android:text="Document 2"></TextView>
+                            android:maxLines="2"
+                            android:ellipsize="end"
+                            android:text="@string/entire_farm_picture"></TextView>
 
                         <ImageView
                             android:id="@+id/document2_camera"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
-                            android:layout_marginTop="20dp"
                             android:orientation="horizontal"
                             android:src="@drawable/photo_camera"
                             android:layout_below="@+id/name1"></ImageView>
@@ -647,10 +646,10 @@
                             android:layout_marginStart="5dp"
                             android:layout_marginTop="5dp"
                             android:layout_marginEnd="5dp"
-                            android:layout_marginBottom="5dp"
                             android:fontFamily="@font/montserrat_medium"
-                            android:maxLines="1"
-                            android:text="Document 3"></TextView>
+                            android:maxLines="3"
+                            android:ellipsize="end"
+                            android:text="@string/farm_picture_to_understand_the_model_of_plantation" />
 
                         <ImageView
                             android:id="@+id/document3_camera"
@@ -658,7 +657,6 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_gravity="center"
-                            android:layout_marginTop="20dp"
                             android:orientation="horizontal"
                             android:src="@drawable/photo_camera"></ImageView>
 
