@@ -27,7 +27,7 @@
                 android:layout_gravity="center"
                 android:fontFamily="@font/poppins_bold"
                 android:textColor="#ffffff"
-                android:textSize="20sp"></TextView>
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -41,7 +41,7 @@
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_weight="1"></View>
+                android:layout_weight="1" />
 
 
             <LinearLayout
@@ -58,14 +58,14 @@
                     android:fontFamily="@font/montserrat_bold"
                     android:text="Farmer Onboarding"
                     android:textColor="#ffffff"
-                    android:textSize="20sp"></TextView>
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_weight="1"></View>
+                android:layout_weight="1" />
 
         </LinearLayout>
 
@@ -80,7 +80,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="@string/version_number"></TextView>
+                android:text="@string/version_number" />
 
 
         </LinearLayout>
@@ -188,7 +188,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="@string/gender"></TextView>
+                    android:text="@string/gender" />
 
                 <RadioGroup
                     android:id="@+id/assam_radioGroup"
@@ -244,7 +244,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/montserrat_bold"
-                    android:text="@string/Caste"></TextView>
+                    android:text="@string/Caste" />
 
                 <RadioGroup
                     android:id="@+id/assam_radioGroup1"
@@ -260,7 +260,6 @@
                         android:layout_weight="1"
                         android:checked="true"
                         android:fontFamily="@font/montserrat_medium"
-                        android:paddingHorizontal="5dp"
                         android:text="@string/ST" />
 
 
@@ -270,7 +269,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_medium"
-                        android:paddingHorizontal="5dp"
                         android:text="@string/SC" />
 
                     <RadioButton
@@ -279,7 +277,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_medium"
-                        android:paddingHorizontal="5dp"
                         android:text="@string/BC" />
 
                     <RadioButton
@@ -288,7 +285,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_medium"
-                        android:paddingHorizontal="5dp"
                         android:text="@string/OBC" />
 
                     <RadioButton
@@ -297,7 +293,6 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:fontFamily="@font/montserrat_medium"
-                        android:paddingHorizontal="5dp"
                         android:text="@string/General" />
 
 
@@ -722,7 +717,7 @@
                                 android:layout_marginBottom="5dp"
                                 android:fontFamily="@font/montserrat_medium"
                                 android:maxLines="1"
-                                android:text="Document 1"></TextView>
+                                android:text="Document 1" />
 
                             <ImageView
                                 android:id="@+id/document1_camera"
@@ -732,7 +727,7 @@
                                 android:layout_gravity="center"
                                 android:layout_marginTop="20dp"
                                 android:orientation="horizontal"
-                                android:src="@drawable/photo_camera"></ImageView>
+                                android:src="@drawable/photo_camera" />
 
                             <ImageView
                                 android:id="@+id/document1_camera_cancel"
@@ -740,7 +735,7 @@
                                 android:layout_height="20dp"
                                 android:layout_marginTop="25dp"
                                 android:src="@drawable/ic_cancel"
-                                android:layout_alignParentRight="true"></ImageView>
+                                android:layout_alignParentRight="true" />
 
 
                         </RelativeLayout>

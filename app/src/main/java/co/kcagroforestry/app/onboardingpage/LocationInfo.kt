@@ -956,6 +956,7 @@ class LocationInfo : AppCompatActivity() {
         val district_id: MultipartBody.Part = MultipartBody.Part.createFormData("district_id", null, districtsid)
         val taluka_id: MultipartBody.Part = MultipartBody.Part.createFormData("taluka_id", null, talukaid)
         val village_id: MultipartBody.Part = MultipartBody.Part.createFormData("village_id", null, villageid)
+        val panchayat_id: MultipartBody.Part = MultipartBody.Part.createFormData("panchayat_id", null, panchayatid)
         val pincode: MultipartBody.Part = MultipartBody.Part.createFormData("pincode", null, pincode_no)
         val remark: MultipartBody.Part = MultipartBody.Part.createFormData("remark", null, remark_data)
         val pattanumber: MultipartBody.Part = MultipartBody.Part.createFormData("pattanumber", null, regestraction)
@@ -970,7 +971,7 @@ class LocationInfo : AppCompatActivity() {
         val apiInterface = ApiClient.getRetrofitInstance().create(ApiInterface::class.java)
 
         val submitLocation = apiInterface.submitLocationInfo("Bearer $token",farmeruniquid,state_id,district_id,taluka_id,
-            village_id,pincode,remark,pattanumber,survey_no,totalarea,planted_area,ImageBody1,ImageBody2,ImageBody3)
+            village_id,panchayat_id,pincode,remark,pattanumber,survey_no,totalarea,planted_area,ImageBody1,ImageBody2,ImageBody3)
 
         submitLocation.enqueue(object : Callback<ResponseBody>{
             override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {

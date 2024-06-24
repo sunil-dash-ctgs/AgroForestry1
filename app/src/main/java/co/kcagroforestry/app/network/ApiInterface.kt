@@ -95,6 +95,7 @@ interface ApiInterface {
         @Part district_id: MultipartBody.Part,
         @Part taluka_id: MultipartBody.Part,
         @Part village_id: MultipartBody.Part,
+        @Part panchayat_id: MultipartBody.Part,
         @Part pincode: MultipartBody.Part,
         @Part remark: MultipartBody.Part,
         @Part pattanumber: MultipartBody.Part,
@@ -153,15 +154,16 @@ interface ApiInterface {
         @Part plantation_id: MultipartBody.Part,
         @Part type_of_plantation: MultipartBody.Part,
         @Part mixed_plantation: MultipartBody.Part,
-        @Part no_of_plants: MultipartBody.Part,
-        @Part girth_of_plant: MultipartBody.Part,
-        @Part plant_spacing: MultipartBody.Part,
-        @Part total_plants: MultipartBody.Part,
-        @Part date_of_plantation: MultipartBody.Part,
-        @Part year_of_plantation: MultipartBody.Part,
         @Part document1_photo: MultipartBody.Part,
         @Part document2_photo: MultipartBody.Part,
         @Part document3_photo: MultipartBody.Part,
+        @Part Current_Standing_Trees: MultipartBody.Part,
+        @Part planttoplantspacing: MultipartBody.Part,
+        @Part rowtorowspacing: MultipartBody.Part,
+        @Part hightofPlant: MultipartBody.Part,
+        @Part girthofPlant: MultipartBody.Part,
+        @Part dateyearofPlantation: MultipartBody.Part,
+
     ): Call<ResponseBody>
 
     @Multipart
