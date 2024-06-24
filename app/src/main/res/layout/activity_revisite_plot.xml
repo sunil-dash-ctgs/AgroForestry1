@@ -45,6 +45,164 @@
                 android:layout_marginRight="20dp"
                 android:src="@drawable/thirdcropintellix"></ImageView>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <!-- <com.google.android.material.textfield.TextInputLayout
+                         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                         android:layout_width="match_parent"
+                         android:layout_height="50dp"
+                         android:fontFamily="@font/montserrat_medium"
+                         android:hint="@string/GirthofPlant"
+                         android:textColorHint="@color/black1"
+                         app:boxStrokeColor="#9BD5AA"
+                         app:boxStrokeWidth="1dp"
+                         app:boxStrokeWidthFocused="1dp">
+
+                         <AutoCompleteTextView
+                             android:id="@+id/NoOfPlants"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:fontFamily="@font/montserrat_medium"
+                             android:inputType="none"
+                             android:focusable="false"
+                             android:maxLength="50"
+                             android:maxLines="1"
+                             android:padding="5dp"
+                             android:textColor="@color/black"
+                             android:textSize="15sp" />
+
+                     </com.google.android.material.textfield.TextInputLayout>-->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="@string/HightofPlant"
+                        android:textColorHint="@color/black1"
+                        app:boxStrokeColor="#9BD5AA"
+                        app:boxStrokeWidth="1dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        app:boxStrokeWidthFocused="1dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/hightofPlant"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:enabled="true"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:inputType="numberDecimal"
+                            android:longClickable="false"
+                            android:maxLength="10"
+                            android:textColorHint="@color/primary"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="@string/GirthofPlant"
+                        android:textColorHint="@color/black1"
+                        app:boxStrokeColor="#9BD5AA"
+                        app:boxStrokeWidth="1dp"
+                        android:fontFamily="@font/montserrat_medium"
+                        app:boxStrokeWidthFocused="1dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/girthofPlant"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:enabled="true"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:inputType="numberDecimal"
+                            android:longClickable="false"
+                            android:maxLength="10"
+                            android:textColorHint="@color/primary"
+                            android:maxLines="1"
+                            android:padding="5dp"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginBottom="15dp">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="@string/standingtrees"
+                    android:textColorHint="@color/black1"
+                    app:boxStrokeColor="#9BD5AA"
+                    app:boxStrokeWidth="1dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    app:boxStrokeWidthFocused="1dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/standingtrees"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:enabled="true"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:longClickable="false"
+                        android:inputType="numberDecimal"
+                        android:textColorHint="@color/primary"
+                        android:maxLength="12"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="DatePlantation" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,7 +213,7 @@
                 android:textSize="15sp"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
-                android:layout_marginTop="100dp"></TextView>
+                android:layout_marginTop="10dp"></TextView>
 
 
             <LinearLayout

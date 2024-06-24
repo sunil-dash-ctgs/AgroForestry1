@@ -71,6 +71,7 @@
     <string name="SC">अनुसूचित जाति</string>
     <string name="BC">ईसा पूर्व</string>
     <string name="OBC">अन्य पिछड़ा वर्ग</string>
+    <string name="General">सामान्य</string>
     <string name="farmer_name">किसान का पूरा नाम</string>
     <string name="NomineeName">नामांकित व्यक्ति का नाम</string>
     <string name="gender">लिंग</string>
@@ -89,8 +90,8 @@
     //Location Screen
     <string name="Patta">पट्टा/आरओएफआर/एच-नंबर/पंजीकरण संख्या</string>
     <string name="SurveyNo">सर्वे नं</string>
-    <string name="TotalAcers">कुल एकड़</string>
-    <string name="PlantedAcers">एकड़ में रोपे गए</string>
+    <string name="TotalArea">कुल क्षेत्रफल(hectare)</string>
+    <string name="PlantedArea">रोपण क्षेत्र(hectare)</string>
     <string name="state">राज्य</string>
     <string name="district">ज़िला</string>
     <string name="taluka">खंड/मंडल</string>
@@ -119,12 +120,19 @@
     <string name="PlantationName">वृक्षारोपण का नाम</string>
     <string name="TypeofPlantation">वृक्षारोपण का प्रकार</string>
     <string name="MixedPlantation">मिश्रित वृक्षारोपण/फसल</string>
-    <string name="GirthofPlant">पौधे की ऊंचाई एवं परिधि</string>
+    <string name="HGirthofPlant">Hight &amp; Girth of Plant</string>
+    <string name="HightofPlant">पौधे की ऊंचाई</string>
+    <string name="GirthofPlant">पौधे की परिधि</string>
     <string name="PlantSpacing">पौधों का अंतर</string>
     <string name="TotalPlants">कुल पौधे</string>
     <string name="DatePlantation">वृक्षारोपण की तिथि</string>
     <string name="YearPlantation">वृक्षारोपण का वर्ष</string>
     <string name="NoOfPlants">पौधों की संख्या</string>
+
+    <string name="planttoplantspacing">पौधे से पौधे के बीच की दूरी (मीटर में)</string>
+    <string name="rowtorowspacing">पंक्ति से पंक्ति अंतर(मीटर)</string>
+    <string name="standingtrees">वर्तमान में खड़े पेड़</string>
+    <string name="DateyearPlantation">वृक्षारोपण की तिथि एवं वर्ष</string>
 
     //Bank Account Details
     <string name="AccountName">खाता धारक का नाम</string>

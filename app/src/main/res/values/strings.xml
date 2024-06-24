@@ -78,6 +78,7 @@
     <string name="SC">SC</string>
     <string name="BC">BC</string>
     <string name="OBC">OBC</string>
+    <string name="General">General</string>
     <string name="farmer_name">Farmer Full Name</string>
     <string name="NomineeName">Nominee Name</string>
     <string name="gender">Gender</string>
@@ -90,13 +91,13 @@
     <string name="mobile">Mobile Number</string>
     <string name="search">Search Mobile Number / Aadhar Number / Farmer Survey ID / Farmer Unique ID</string>
     <string name="mobile_access">Mobile Access</string>
-   <!-- <string name="mobile_access_warning">Select mobile access</string>-->
+    <!-- <string name="mobile_access_warning">Select mobile access</string>-->
 
     //Location Screen
     <string name="Patta">Patta/ROFR/H-No/Registration No</string>
     <string name="SurveyNo">Survey No</string>
-    <string name="TotalAcers">Total Acres</string>
-    <string name="PlantedAcers">Planted Acres</string>
+    <string name="TotalArea">Total Area(Hector)</string>
+    <string name="PlantedArea">Planted Area(Hector)</string>
     <string name="state">State</string>
     <string name="district">District</string>
     <string name="taluka">Block/Mandal</string>
@@ -156,12 +157,19 @@
     <string name="PlantationName">Plantation Name</string>
     <string name="TypeofPlantation">Type of Plantation</string>
     <string name="MixedPlantation">Mixed Plantation/Crop</string>
-    <string name="GirthofPlant">Hight &amp; Girth of Plant</string>
+    <string name="HGirthofPlant">Height &amp; Girth of Plant</string>
+    <string name="HightofPlant">Height of Plant(cm)</string>
+    <string name="GirthofPlant">Girth of Plant</string>
     <string name="PlantSpacing">Plant Spacing</string>
     <string name="TotalPlants">Total Plants</string>
     <string name="DatePlantation">Date of Plantation</string>
     <string name="YearPlantation">Year of Plantation</string>
     <string name="NoOfPlants">No Of Plants</string>
+    <string name="planttoplantspacing">Plant to Plant Spacing(mtr)</string>
+    <string name="rowtorowspacing">Row to Row Spacing(mtr)</string>
+    <string name="standingtrees">Current Standing Trees</string>
+    <string name="DateyearPlantation">Date &amp; Year of Plantation</string>
+
 
     //Bank Account Details
     <string name="AccountName">Account Holder Name</string>

@@ -82,6 +82,7 @@ interface ApiInterface {
         @Part document1_photo: MultipartBody.Part,
         @Part document2_photo: MultipartBody.Part,
         @Part document3_photo: MultipartBody.Part,
+        @Part mobile_relation_owner: MultipartBody.Part,
         ): Call<ResponseBody>
 
     @Multipart
@@ -94,6 +95,7 @@ interface ApiInterface {
         @Part district_id: MultipartBody.Part,
         @Part taluka_id: MultipartBody.Part,
         @Part village_id: MultipartBody.Part,
+        @Part panchayat_id: MultipartBody.Part,
         @Part pincode: MultipartBody.Part,
         @Part remark: MultipartBody.Part,
         @Part pattanumber: MultipartBody.Part,
@@ -149,18 +151,19 @@ interface ApiInterface {
     fun submitPlantationinfo(
         @Header("Authorization") token: String,
         @Part farmeruniquid: MultipartBody.Part,
-        @Part plantation_name: MultipartBody.Part,
+        @Part plantation_id: MultipartBody.Part,
         @Part type_of_plantation: MultipartBody.Part,
         @Part mixed_plantation: MultipartBody.Part,
-        @Part no_of_plants: MultipartBody.Part,
-        @Part girth_of_plant: MultipartBody.Part,
-        @Part plant_spacing: MultipartBody.Part,
-        @Part total_plants: MultipartBody.Part,
-        @Part date_of_plantation: MultipartBody.Part,
-        @Part year_of_plantation: MultipartBody.Part,
         @Part document1_photo: MultipartBody.Part,
         @Part document2_photo: MultipartBody.Part,
         @Part document3_photo: MultipartBody.Part,
+        @Part Current_Standing_Trees: MultipartBody.Part,
+        @Part planttoplantspacing: MultipartBody.Part,
+        @Part rowtorowspacing: MultipartBody.Part,
+        @Part hightofPlant: MultipartBody.Part,
+        @Part girthofPlant: MultipartBody.Part,
+        @Part dateyearofPlantation: MultipartBody.Part,
+
     ): Call<ResponseBody>
 
     @Multipart
@@ -181,10 +184,12 @@ interface ApiInterface {
     ): Call<ResponseBody>
 
     @Headers("Accept: application/json")
-    @GET("V1/agro-farmer-search")
+   // @GET("V1/agro-farmer-search")
+    @GET("V1/search-uniqueid/list")
     fun searchFramer(
         @Header("Authorization") token: String,
-        @Query("data") mobile: String
+        @Query("data") mobile: String,
+        @Query("search_type") search_type: String
     ): Call<ResponseBody>
 
     @Headers("Accept: application/json")
@@ -241,6 +246,9 @@ interface ApiInterface {
         @Part document_2: MultipartBody.Part,
         @Part document_3: MultipartBody.Part,
         @Part status: MultipartBody.Part,
+        @Part plant_height: MultipartBody.Part,
+        @Part plant_girth: MultipartBody.Part,
+        @Part current_standing: MultipartBody.Part,
     ): Call<ResponseBody>
 
     @Headers("Accept: application/json")
@@ -251,4 +259,96 @@ interface ApiInterface {
     @GET("V1/search-type")
     fun searchType(@Header("Authorization") token: String): Call<ResponseBody>
 
+    @Headers("Accept: application/json")
+    @GET("plantation_name")
+    fun plantationname(@Header("Authorization") token: String): Call<ResponseBody>
+
+    @Headers("Accept: application/json")
+    @GET("V1/get_farmer_data")
+    fun getfarmerdata(
+        @Header("Authorization") token: String,
+        @Query("farmeruniquid") farmeruniquid: String,
+        @Query("screen") screen: String,
+    ): Call<ResponseBody>
+
+    @Multipart
+    @Headers("Accept: application/json")
+    @POST("V1/farmer-onboarding-info-update")
+    fun farmeronboardinginfoupdate(
+        @Header("Authorization") token: String,
+        @Part farmeruniquid: MultipartBody.Part,
+        @Part farmer_name: MultipartBody.Part,
+        @Part farmer_age: MultipartBody.Part,
+        @Part gender: MultipartBody.Part,
+        @Part cast: MultipartBody.Part,
+        @Part guardian_name: MultipartBody.Part,
+        @Part nominee_name: MultipartBody.Part,
+        @Part relationwith: MultipartBody.Part,
+        @Part mobileno: MultipartBody.Part,
+        @Part whats_no: MultipartBody.Part,
+        @Part aadharnumber: MultipartBody.Part,
+        @Part mobile_relation_owner: MultipartBody.Part,
+    ): Call<ResponseBody>
+
+    @Multipart
+    @Headers("Accept: application/json")
+    @POST("V1/update-farmer-location")
+    fun updatefarmerlocation(
+        @Header("Authorization") token: String,
+        @Part farmeruniquid: MultipartBody.Part,
+        @Part state_id: MultipartBody.Part,
+        @Part district_id: MultipartBody.Part,
+        @Part taluka_id: MultipartBody.Part,
+        @Part village_id: MultipartBody.Part,
+        @Part pincode: MultipartBody.Part,
+        @Part remark: MultipartBody.Part,
+        @Part pattanumber: MultipartBody.Part,
+        @Part survey_no: MultipartBody.Part,
+        @Part totalarea: MultipartBody.Part,
+        @Part planted_area: MultipartBody.Part,
+    ): Call<ResponseBody>
+
+    @Multipart
+    @Headers("Accept: application/json")
+    @POST("V1/update-farmer-plantation")
+    fun updatefarmerplantation(
+        @Header("Authorization") token: String,
+        @Part farmeruniquid: MultipartBody.Part,
+        @Part plantation_id: MultipartBody.Part,
+        @Part type_of_plantation: MultipartBody.Part,
+        @Part mixed_plantation: MultipartBody.Part,
+        @Part no_of_plants: MultipartBody.Part,
+        @Part girth_of_plant: MultipartBody.Part,
+        @Part plant_spacing: MultipartBody.Part,
+        @Part total_plants: MultipartBody.Part,
+        @Part date_of_plantation: MultipartBody.Part,
+        @Part year_of_plantation: MultipartBody.Part,
+    ): Call<ResponseBody>
+
+    @Multipart
+    @Headers("Accept: application/json")
+    @POST("V1/update-farmer-culativation")
+    fun updatefarmerulativation(
+        @Header("Authorization") token: String,
+        @Part farmeruniquid: MultipartBody.Part,
+        @Part soil_types: MultipartBody.Part,
+        @Part plowwing_of_land: MultipartBody.Part,
+        @Part fertigation_management: MultipartBody.Part,
+        @Part irrigation_type: MultipartBody.Part,
+        @Part water_management: MultipartBody.Part,
+        @Part did_you_notice: MultipartBody.Part,
+    ): Call<ResponseBody>
+
+    @Multipart
+    @Headers("Accept: application/json")
+    @POST("V1/update-farmer-bank-details")
+    fun updatefarmerbankdetails(
+        @Header("Authorization") token: String,
+        @Part farmeruniquid: MultipartBody.Part,
+        @Part account_holder_name: MultipartBody.Part,
+        @Part account_number: MultipartBody.Part,
+        @Part bank_name: MultipartBody.Part,
+        @Part ifsc_code: MultipartBody.Part,
+        @Part branch: MultipartBody.Part,
+    ): Call<ResponseBody>
 }

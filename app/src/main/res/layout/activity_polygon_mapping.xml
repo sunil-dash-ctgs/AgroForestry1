@@ -98,61 +98,68 @@
                 android:text="@string/search"
                 android:fontFamily="@font/montserrat_bold" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:fontFamily="@font/poppins_medium"
-                android:hint="Select Seach Type"
-                app:boxStrokeColor="#9BD5AA"
-                app:boxStrokeWidth="1dp"
-                app:endIconTint="@color/black"
-                app:boxStrokeWidthFocused="1dp">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
 
-                <AutoCompleteTextView
-                    android:id="@+id/search_type_spinner"
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:fontFamily="@font/poppins_regular"
-                    android:inputType="textNoSuggestions|textUri"
-                    android:maxLength="50"
-                    android:maxLines="1"
-                    android:padding="5dp"
-                    android:clickable="false"
-                    android:focusable="false"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    android:layout_height="50dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:hint="Search Type"
+                    android:textColorHint="@color/black1"
+                    app:boxStrokeColor="#9BD5AA"
+                    app:boxStrokeWidth="1dp"
+                    app:boxStrokeWidthFocused="1dp">
 
-            </com.google.android.material.textfield.TextInputLayout>
+                    <AutoCompleteTextView
+                        android:id="@+id/searchTypeSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:fontFamily="@font/poppins_regular"
+                        android:inputType="none"
+                        android:maxLength="50"
+                        android:maxLines="1"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
+                android:layout_height="wrap_content">
 
                 <com.google.android.material.textfield.TextInputLayout
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
+                    android:fontFamily="@font/poppins_medium"
                     android:hint="@string/search_here"
                     android:textColorHint="@color/black1"
                     app:boxStrokeColor="#9BD5AA"
                     app:boxStrokeWidth="1dp"
-                    android:fontFamily="@font/montserrat_medium"
                     app:boxStrokeWidthFocused="1dp">
 
                     <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/search_data"
+                        android:id="@+id/searchData"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:enabled="true"
-                        android:fontFamily="@font/montserrat_medium"
+                        android:fontFamily="@font/poppins_regular"
                         android:longClickable="false"
                         android:maxLength="50"
-                        android:textColorHint="@color/primary"
                         android:maxLines="1"
                         android:padding="10dp"
                         android:textColor="@color/black"
+                        android:textColorHint="@color/black1"
                         android:textSize="15sp" />
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -162,9 +169,9 @@
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_alignParentEnd="true"
-                    android:backgroundTint="#F9F8FA"
                     android:layout_marginTop="15dp"
                     android:layout_marginRight="5dp"
+                    android:backgroundTint="#F9F8FA"
                     android:src="@drawable/ic_search" />
 
 
